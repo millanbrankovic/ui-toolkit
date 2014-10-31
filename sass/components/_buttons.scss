@@ -1,0 +1,80 @@
+// Buttons
+//------------------------------------------------------------
+//
+
+
+// Buttons Variables
+// --------------------------------------------------
+
+$btn-tny: rem-calc(8);
+$btn-sml: rem-calc(10);
+$btn-med: rem-calc(14);
+$btn-lrg: rem-calc(18);
+
+$btn-tny-font-size: rem-calc(12);
+$btn-sml-font-size: rem-calc(15);
+$btn-med-font-size: rem-calc(18);
+$btn-lrg-font-size: rem-calc(22);
+
+$btn-brand-color: #078fd8;
+$btn-default-color: #fff;
+
+
+// Button Placeholder & Mixin
+// --------------------------------------------------
+
+%btn {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-family: $base-font-regular;
+    cursor: pointer;
+    border-radius: $global-radius;
+    transition: all .35s ease;
+    user-select: none;
+
+    @include screen ($large) {
+        width: auto;
+    }
+}
+
+@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: rem-calc(12), $btn-margin: false, $btn-width: false) {
+    padding: $btn-padding;
+    font-size: $btn-font-size;
+    background: $btn-bg;
+    @include match-colors($btn-bg, $btn-color);
+
+    @if ($btn-width) {
+        width: $btn-width;
+    }
+
+    @if ($btn-margin) {
+        margin: $btn-margin;
+    }
+
+    @if ($btn-border-color) {
+        border: 1px solid $btn-border-color;
+    } @else {
+        border: 1px solid darken($btn-bg, 9%);
+    }
+
+    &:hover {
+        background: lighten($btn-bg, 8%);
+    }
+
+    &:active,
+    &:focus {
+        background: darken($btn-bg, 8%);
+    }
+
+    &:disabled {
+        color: rgba(#000, .3);
+        cursor: default;
+        pointer-events: none;
+        border-color: darken($light-color, 15%);
+        background: darken($light-color, 6%);
+    }
+}
+

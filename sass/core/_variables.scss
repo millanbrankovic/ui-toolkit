@@ -1,0 +1,65 @@
+// Variables
+//------------------------------------------------------------
+//
+
+
+// Colors
+// --------------------------------------------------
+
+$light-color: #fff;
+$base-font-color: #222;
+$brand-primary: #078fd8;
+$brand-secondary: #333;
+
+
+// Alerts Colors
+$error-color: #fb9282;
+$success-color: #97df8b;
+$warning-color: #fece89;
+$info-color: #bee7f8;
+
+
+// Global
+// --------------------------------------------------
+
+$rem-base: 16px !default;
+$body-bg: darken($light-color, 10%);
+$body-font-family: Helvetica, Arial, sans-serif;
+$font-smoothing: antialiased;
+
+
+// Typography
+// --------------------------------------------------
+
+$base-font-size: rem-calc(16) !default;
+$base-font-light: 'open_sanslight';
+$base-font-regular: 'open_sansregular';
+$base-font-strong: 'open_sansbold';
+
+
+// Headings
+// --------------------------------------------------
+
+$h1-size: rem-calc(44);
+$h2-size: rem-calc(37);
+$h3-size: rem-calc(27);
+$h4-size: rem-calc(23);
+$h5-size: rem-calc(18);
+$h6-size: rem-calc(16);
+
+
+// Paragraph
+// --------------------------------------------------
+
+$paragraph-size: rem-calc(16);
+$paragraph-line-height: 1.6;
+
+
+// UI Styles
+// --------------------------------------------------
+
+$global-radius: 3px;
+$global-shadow: 0 0 8px rgba(#000, .2);
+$global-shadow-inset: 0 0 6px rgba(#000, .3);
+$base-border: 1px solid darken($light-color, 20%);
+

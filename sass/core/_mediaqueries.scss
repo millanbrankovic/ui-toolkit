@@ -1,0 +1,31 @@
+// Media Queries
+//------------------------------------------------------------
+//
+
+
+// Media Queries Variables
+// --------------------------------------------------
+
+$small: "max-width: 40rem"; // 640px
+$medium: "min-width: 40.06rem"; // 641px
+$large: "min-width: 64.06rem"; // 1025px
+$xlarge: "min-width: 90.06rem"; // 1441px
+$xxlarge: "min-width: 120.1rem"; // 1921px
+$portrait: "orientation: portrait" !default;
+$landscape: "orientation: landscape" !default;
+
+
+// Media Queries Mixin
+// --------------------------------------------------
+
+@mixin screen($breakpoint, $orientation: false) {
+    @if $orientation != false {
+        @media (#{$breakpoint}) and (#{$orientation}) {
+            @content;
+        }
+    } @else {
+        @media ($breakpoint) {
+            @content;
+        }
+    }
+}

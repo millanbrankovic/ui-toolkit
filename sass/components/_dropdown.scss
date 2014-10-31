@@ -1,0 +1,115 @@
+// Drop Down
+//------------------------------------------------------------
+//
+
+
+.drop-down-menu {
+    @extend %list-reset;
+    font-size: 0;
+
+    > li {
+        display: inline-block;
+        position: relative;
+        font-size: rem-calc(14);
+        border-left: 1px solid darken($light-color, 70%);
+        background: darken($light-color, 90%);
+
+        &:first-child {
+            border: none;
+        }
+
+        &:hover {
+            > .drop-down {
+                margin: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        > a {
+            display: block;
+            font-weight: 700;
+            color: darken($light-color, 40%);
+            padding: rem-calc(15 25);
+            text-transform: uppercase;
+
+            &:hover {
+                color: $light-color;
+                background: $brand-primary;
+            }
+        }
+    }
+
+    .has-drop-down {
+        > a {
+            &:after {
+                content: "▾";
+                float: right;
+                font-size: rem-calc(14);
+                margin: rem-calc(-1 -15 0 10);
+                transition: all .15s ease;
+            }
+        }
+    }
+}
+
+.drop-down {
+    @extend %list-reset;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin: rem-calc(20 0 0);
+    visibility: hidden;
+    position: absolute;
+    background: darken($light-color, 78%);
+    transition: all .15s ease;
+
+    li {
+        border-bottom: 1px solid darken($light-color, 65%);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    a {
+        display: block;
+        position: relative;
+        padding: rem-calc(15 10);
+        color: darken($light-color, 40%);
+
+        &:hover {
+            color: $light-color;
+            background: $brand-primary;
+        }
+    }
+
+    > li {
+        &:first-child {
+            a {
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    top: rem-calc(-8);
+                    left: 50%;
+                    position: absolute;
+                    transition: all .3s ease;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid darken($light-color, 78%);
+                    transform: translateX(-50%);
+                }
+
+                &:hover {
+                    &:before {
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-bottom: 8px solid $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,188 @@
+// Forms
+//------------------------------------------------------------
+//
+
+
+// Inputs
+// --------------------------------------------------
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea,
+select {
+    width: 100%;
+    margin: rem-calc(5 0);
+    padding: rem-calc(8 10);
+    color: rgba(#000, .75);
+    font: {
+        size: rem-calc(14);
+        family: inherit;
+    }
+    background: none $light-color;
+    border: $base-border;
+    border-radius: $global-radius;
+    transition: all .35s ease;
+    appearance: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: inset 0 0 2px rgba(#000, .08);
+        background: darken($light-color, 3%);
+        border-color: darken($light-color, 17%);
+    }
+
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] {
+        cursor: default;
+        color: rgba(#000, .3);
+        background: darken($light-color, 6%);
+    }
+}
+
+textarea {
+    max-width: 100%;
+}
+
+
+// Fieldset
+// --------------------------------------------------
+
+fieldset {
+    margin: rem-calc(20 0);
+    padding: rem-calc(10);
+    border: $base-border;
+
+    legend {
+        margin: 0;
+        padding: rem-calc(5);
+        font-weight: bold;
+    }
+}
+
+
+// Custom Inputs
+// --------------------------------------------------
+
+.custom-inputs {
+    position: relative;
+    display: inline-block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    top: 3px;
+    left: 2px;
+    margin: 0;
+    z-index: 3;
+    visibility: hidden;
+    position: absolute;
+
+    + label {
+        cursor: pointer;
+        position: relative;
+        user-select: none;
+
+        * {
+            transition: all .35s ease;
+        }
+
+        .check {
+            @include same-size(rem-calc(16));
+            z-index: 2;
+            display: inline-block;
+            vertical-align: middle;
+            border: $base-border;
+            border-radius: $global-radius;
+            margin: rem-calc(0 2 0 0);
+
+            &:after {
+                opacity: 0;
+                position: absolute;
+                transition: all .3s ease;
+            }
+        }
+
+        .label {
+            font: {
+                size: rem-calc(15);
+                family: $base-font-regular;
+            }
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &:checked {
+        + label {
+            .check {
+                background: darken($light-color, 5%);
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &:disabled {
+        + label {
+            opacity: .3;
+            cursor: default;
+            pointer-events: none;
+
+            .check {
+                background: darken($light-color, 20%);
+                border-color: darken($light-color, 40%);
+            }
+        }
+    }
+}
+
+// Checkboxes
+input[type="checkbox"] {
+    + label {
+        .check {
+            &:after {
+                content: "✓";
+                top: -2px;
+                left: 3px;
+                line-height: 1;
+                color: $brand-primary;
+                font-size: rem-calc(20);
+            }
+        }
+    }
+}
+
+// Radiobuttons
+input[type="radio"] {
+    + label {
+        .check {
+            position: relative;
+            border-radius: 100px;
+
+            &:after {
+                content: "";
+                top: 3px;
+                left: 3px;
+                @include same-size(rem-calc(8));
+                border-radius: 100px;
+                background: $brand-primary;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+// Alerts
+//------------------------------------------------------------
+//
+
+
+%alert {
+    display: block;
+    padding: rem-calc(12);
+    cursor: default;
+    position: relative;
+    font-size: rem-calc(14);
+    border: 1px solid transparent;
+    border-radius: $global-radius;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+
+    .close {
+        padding: rem-calc(7);
+        top: 0;
+        right: 0;
+        position: absolute;
+        cursor: pointer;
+        line-height: .6;
+        text-align: center;
+        font-size: rem-calc(18);
+    }
+}
+
+%alert-error {
+    @extend %alert;
+    color: darken($error-color, 35%);
+    border-color: darken($error-color, 12%);
+    background: $error-color;
+}
+
+%alert-success {
+    @extend %alert;
+    color: darken($success-color, 35%);
+    border-color: darken($success-color, 12%);
+    background: $success-color;
+}
+
+%alert-warning {
+    @extend %alert;
+    color: darken($warning-color, 35%);
+    border-color: darken($warning-color, 12%);
+    background: $warning-color;
+}
+
+%alert-info {
+    @extend %alert;
+    color: darken($info-color, 35%);
+    border-color: darken($info-color, 12%);
+    background: $info-color;
+}

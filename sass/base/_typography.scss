@@ -1,0 +1,63 @@
+// Typography
+//------------------------------------------------------------
+//
+
+
+// WebFonts
+// --------------------------------------------------
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../../assets/fonts/opensans-light-webfont.eot');
+    src: url('../../assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/opensans-light-webfont.woff') format('woff'),
+        url('../../assets/fonts/opensans-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../../assets/fonts/opensans-regular-webfont.eot');
+    src: url('../../assets/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/opensans-regular-webfont.woff') format('woff'),
+        url('../../assets/fonts/opensans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../../assets/fonts/opensans-bold-webfont.eot');
+    src: url('../../assets/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/opensans-bold-webfont.woff') format('woff'),
+        url('../../assets/fonts/opensans-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// Headings
+// --------------------------------------------------
+
+h1 { font-size: $h1-size; }
+
+h2 { font-size: $h2-size; }
+
+h3 { font-size: $h3-size; }
+
+h4 { font-size: $h4-size; }
+
+h5 { font-size: $h5-size; }
+
+h6 { font-size: $h6-size; }
+
+
+// Paragraph
+// --------------------------------------------------
+
+p {
+    font-size: $paragraph-size;
+    line-height: $paragraph-line-height;
+}
+

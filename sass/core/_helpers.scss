@@ -1,0 +1,68 @@
+// Helpers
+//------------------------------------------------------------
+//
+
+
+// Clearfix
+// --------------------------------------------------
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+// Fade in
+// --------------------------------------------------
+
+%fade {
+    opacity: 0;
+    transition: opacity .35s ease;
+
+    &.in {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+%overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    background: rgba(41, 46, 52, .9);
+}
+
+
+// Libs
+// --------------------------------------------------
+
+.show { display: block; }
+
+.hide { display: none; }
+
+.visible { visibility: visible; }
+
+.hidden { visibility: hidden; }
+
+.fleft { float: left; }
+
+.fright { float: right; }
+
+%list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+%hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+}
+

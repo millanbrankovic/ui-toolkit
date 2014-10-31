@@ -1,0 +1,106 @@
+// Mixins
+//------------------------------------------------------------
+//
+
+
+// Retina Sprite Mixin
+// --------------------------------------------------
+
+$icons: sprite-map("icons/*.png", $layout: smart) !default;
+$sprite-high-res-suffix: '-2x' !default;
+
+@mixin retina-icon($sprite, $sprite-retina: false, $sprite-map: $icons) {
+    $sprite-high-res: #{$sprite}#{$sprite-high-res-suffix};
+    background-image: sprite-url($sprite-map);
+    background-position: sprite-position($sprite-map, $sprite);
+    background-repeat: no-repeat;
+    height: image-height(sprite-file($sprite-map, $sprite));
+    width: image-width(sprite-file($sprite-map, $sprite));
+    overflow: hidden;
+
+    @if $sprite-retina {
+        @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+            background-size: (image-width(sprite-path($sprite-map)) / 2) (image-height(sprite-path($sprite-map)) / 2);
+            background-position: round(nth(sprite-position($sprite-map, $sprite-high-res), 1) / 2) round(nth(sprite-position($sprite-map, $sprite-high-res), 2) / 2);
+            height: image-height(sprite-file($sprite-map, $sprite));
+            width: image-width(sprite-file($sprite-map, $sprite));
+        }
+    }
+}
+
+
+// Match Colors Mixin
+// --------------------------------------------------
+
+@mixin match-colors($bg: false, $fg: false) {
+    @if ($fg) {
+        color: $fg;
+    } @else {
+        @if (lightness($bg) > 50) {
+            color: rgba(#000, .6);
+        } @else {
+            color: rgba(#fff, .95);
+        }
+    }
+}
+
+
+// Same Size Mixin
+// --------------------------------------------------
+
+@mixin same-size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+
+// Font Smoothing Mixin
+// --------------------------------------------------
+
+@mixin font-smoothing($value: antialiased) {
+    @if $value == antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+
+// Selected Background Color
+// --------------------------------------------------
+
+@mixin selection-colors($color, $background) {
+    $prefixes: ("-moz-", "-webkit-", "-o-", "-ms-", "");
+
+    @each $prefix in $prefixes {
+        &::#{$prefix}selection {
+            color: $color;
+            background: $background;
+        }
+    }
+}
+
+
+// Vertical Aligment
+// --------------------------------------------------
+
+@mixin vertical-aligment($child) {
+    font-size: 0;
+
+    &:before,
+    &:after {
+        content: "";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #{$child} {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
