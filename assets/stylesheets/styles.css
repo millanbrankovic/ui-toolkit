@@ -324,35 +324,6 @@ table {
   float: right;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box !important;
-}
-
-body, html {
-  color: #222222;
-  font-size: 16px;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-img {
-  max-width: 100%;
-  border: none;
-}
-
-a {
-  line-height: 1;
-  color: #078fd8;
-  text-decoration: none;
-  -webkit-transition: all .35s ease;
-          transition: all .35s ease;
-}
-a:hover {
-  color: #4cbdf9;
-}
-a:active {
-  color: #056ea7;
-}
-
 @font-face {
   font-family: 'open_sanslight';
   src: url("../../assets/fonts/opensans-light-webfont.eot");
@@ -404,4 +375,32 @@ h6 {
 p {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box !important;
+}
+
+body, html {
+  color: #222222;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  line-height: 1;
+  color: #078fd8;
+  text-decoration: none;
+  -webkit-transition: all .35s ease;
+          transition: all .35s ease;
+}
+a:hover {
+  color: #4cbdf9;
+}
+a:active {
+  color: #056ea7;
 }
