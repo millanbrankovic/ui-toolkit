@@ -23,34 +23,33 @@
 @import "core/variables";
 @import "core/mixins";
 @import "core/mediaqueries";
-@import "core/grid";
-
-
-// Components
-//------------------------------------------------------------
-
-@import "components/alerts";
-@import "components/buttons";
-@import "components/forms";
-@import "components/dropdown";
-
-
-// Layout
-//------------------------------------------------------------
-
-@import "layout/header";
-@import "layout/footer";
-
-
-// Pages
-//------------------------------------------------------------
-
-@import "pages/home";
+// @import "core/grid";
 
 
 // Base
 //------------------------------------------------------------
 
-@import "base/base";
 @import "base/typography";
+@import "base/base";
 
+
+// Components
+//------------------------------------------------------------
+
+// @import "components/alerts";
+// @import "components/buttons";
+// @import "components/forms";
+// @import "components/dropdown";
+
+
+// Layout
+//------------------------------------------------------------
+
+// @import "layout/header";
+// @import "layout/footer";
+
+
+// Pages
+//------------------------------------------------------------
+
+// @import "pages/home";
