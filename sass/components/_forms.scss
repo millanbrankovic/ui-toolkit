@@ -23,18 +23,14 @@ input[type="color"],
 textarea,
 select {
     width: 100%;
-    margin: rem-calc(5 0);
     padding: rem-calc(8 10);
     color: rgba(#000, .75);
-    font: {
-        size: rem-calc(14);
-        family: inherit;
-    }
+    font-size: rem-calc(14);
     background: none $light-color;
     border: $base-border;
     border-radius: $global-radius;
     transition: all .35s ease;
-    appearance: none;
+    @include appearance(none);
 
     &:focus {
         outline: none;
@@ -54,6 +50,10 @@ select {
 
 textarea {
     max-width: 100%;
+}
+
+option {
+    margin: rem-calc(3 0);
 }
 
 
@@ -79,6 +79,41 @@ fieldset {
 .custom-inputs {
     position: relative;
     display: inline-block;
+
+    &.select {
+        min-width: 10%;
+
+        select {
+            padding-right: rem-calc(15);
+        }
+
+        &:after {
+            content: "▾";
+            width: rem-calc(20);
+            height: 100%;
+            top: 0;
+            right: 0;
+            position: absolute;
+            line-height: 1.6;
+            font-size: rem-calc(20);
+            color: darken($light-color, 20%);
+            text-align: center;
+            pointer-events: none;
+            background: $light-color;
+            border-top: $base-border;
+            border-right: $base-border;
+            border-bottom: $base-border;
+            border-radius: 0 $global-radius $global-radius 0;
+        }
+
+        select {
+            &:focus {
+                box-shadow: none;
+                background: $light-color;
+                border-color: darken($light-color, 20%);
+            }
+        }
+    }
 }
 
 input[type="checkbox"],
@@ -116,10 +151,7 @@ input[type="radio"] {
         }
 
         .label {
-            font: {
-                size: rem-calc(15);
-                family: $base-font-regular;
-            }
+            font-size: rem-calc(15);
             display: inline-block;
             vertical-align: middle;
         }

@@ -42,6 +42,17 @@ $col-gutter: rem-calc(15) !default;
 }
 
 
+@mixin font-smoothing($value: antialiased) {
+    @if $value == antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+
 // Placeholder Helper for styling content inside columns
 // --------------------------------------------------
 
@@ -50,7 +61,12 @@ $col-gutter: rem-calc(15) !default;
     margin: rem-calc(0 0 15);
     padding: rem-calc(15);
     background: darken($light-color, 10%);
-    @extend %clearfix;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
     @include screen($large) {
         margin: rem-calc(0 0 30);

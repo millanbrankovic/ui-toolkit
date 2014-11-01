@@ -3,19 +3,78 @@
 //
 
 
+// Drop Down Toogle
+// --------------------------------------------------
+
+.toogle-menu {
+    display: block;
+    padding: rem-calc(15 25);
+    color: $light-color;
+    cursor: pointer;
+    position: relative;
+    font-size: rem-calc(13);
+    text-align: right;
+    text-transform: uppercase;
+    user-select: none;
+    background: darken($light-color, 90%);
+    border-bottom: 1px solid darken($light-color, 70%);
+
+    span {
+        margin: rem-calc(0 15 0 0);
+
+        &:after {
+            content: "";
+            width: 16px;
+            right: rem-calc(15);
+            position: absolute;
+            box-shadow: 0 0 0 1px $light-color, 0 7px 0 1px $light-color, 0 14px 0 1px $light-color;
+        }
+    }
+
+    @include screen($medium) {
+        display: none;
+    }
+}
+
+
+// Drop Down Menu
+// --------------------------------------------------
+
 .drop-down-menu {
     @extend %list-reset;
     font-size: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .6s ease;
+
+    &.expanded {
+        max-height: 1000px;
+        transition: max-height 1.4s ease;
+    }
+
+    @include screen($medium) {
+        float: right;
+        max-height: 100%;
+        overflow: visible;
+    }
 
     > li {
-        display: inline-block;
+        display: block;
         position: relative;
         font-size: rem-calc(14);
-        border-left: 1px solid darken($light-color, 70%);
+        border-bottom: 1px solid darken($light-color, 70%);
         background: darken($light-color, 90%);
 
-        &:first-child {
-            border: none;
+        @include screen($medium) {
+            display: inline-block;
+            border-bottom: none;
+            border-left: 1px solid darken($light-color, 70%);
+        }
+
+        @include screen($medium) {
+            &:first-child {
+                border: none;
+            }
         }
 
         &:hover {
@@ -28,7 +87,6 @@
 
         > a {
             display: block;
-            font-weight: 700;
             color: darken($light-color, 40%);
             padding: rem-calc(15 25);
             text-transform: uppercase;
@@ -106,6 +164,49 @@
                         border-left: 8px solid transparent;
                         border-right: 8px solid transparent;
                         border-bottom: 8px solid $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        &.has-drop-down {
+            position: relative;
+
+            > a {
+                &:after {
+                    content: "»";
+                    float: right;
+                    font-size: rem-calc(18);
+                    margin: rem-calc(-2 0 0);
+                    transition: all .15s ease;
+                }
+            }
+        }
+
+        &:hover {
+            > .drop-down {
+                margin: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .drop-down {
+        width: 100%;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        margin: rem-calc(20 0 0);
+        visibility: hidden;
+
+        > li {
+            &:first-child {
+                a {
+                    &:before {
+                        display: none;
                     }
                 }
             }

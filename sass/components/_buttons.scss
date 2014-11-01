@@ -6,10 +6,10 @@
 // Buttons Variables
 // --------------------------------------------------
 
-$btn-tny: rem-calc(8);
-$btn-sml: rem-calc(10);
-$btn-med: rem-calc(14);
-$btn-lrg: rem-calc(18);
+$btn-tny: rem-calc(6 10);
+$btn-sml: rem-calc(8 12);
+$btn-med: rem-calc(12 14);
+$btn-lrg: rem-calc(16 20);
 
 $btn-tny-font-size: rem-calc(12);
 $btn-sml-font-size: rem-calc(15);
@@ -29,7 +29,6 @@ $btn-default-color: #fff;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    font-family: $base-font-regular;
     cursor: pointer;
     border-radius: $global-radius;
     transition: all .35s ease;
@@ -40,7 +39,7 @@ $btn-default-color: #fff;
     }
 }
 
-@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: rem-calc(12), $btn-margin: false, $btn-width: false) {
+@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: rem-calc(10), $btn-margin: false, $btn-width: false) {
     padding: $btn-padding;
     font-size: $btn-font-size;
     background: $btn-bg;
