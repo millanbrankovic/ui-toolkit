@@ -1,4 +1,4 @@
-# ToolKity
+# UIToolKity
 
 ## A Little Responsive UI ToolKit for starting new project
 
