@@ -1,6 +1,5 @@
-# Require any additional compass plugins here.
+# Require any additional plugins...
 require "compass-normalize"
-
 require 'autoprefixer-rails'
 
 on_stylesheet_saved do |file|
