@@ -5,6 +5,7 @@
 
 *, *:before, *:after {
     box-sizing: border-box !important;
+    -webkit-tap-highlight-color: black(0);
 }
 
 body, html {

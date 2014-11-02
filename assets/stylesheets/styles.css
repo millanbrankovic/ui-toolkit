@@ -500,6 +500,7 @@ p {
 
 *, *:before, *:after {
   box-sizing: border-box !important;
+  -webkit-tap-highlight-color: black(0);
 }
 
 body, html {
@@ -1187,6 +1188,7 @@ input[type="radio"] + label .check:after {
   background: #11a7f7;
 }
 .buttons button:active, .buttons button:focus {
+  outline: none;
   background: #0675b0;
 }
 .buttons button:disabled {
@@ -1207,6 +1209,7 @@ input[type="radio"] + label .check:after {
   background: white;
 }
 .buttons .default-button:active, .buttons .default-button:focus {
+  outline: none;
   background: #ebebeb;
 }
 .buttons .default-button:disabled {
@@ -1227,6 +1230,7 @@ input[type="radio"] + label .check:after {
   background: #11a7f7;
 }
 .buttons .brand-button:active, .buttons .brand-button:focus {
+  outline: none;
   background: #0675b0;
 }
 .buttons .brand-button:disabled {
@@ -1247,6 +1251,7 @@ input[type="radio"] + label .check:after {
   background: #e3f5fc;
 }
 .buttons .info-button:active, .buttons .info-button:focus {
+  outline: none;
   background: #99d9f4;
 }
 .buttons .info-button:disabled {
@@ -1267,6 +1272,7 @@ input[type="radio"] + label .check:after {
   background: #b4e8ab;
 }
 .buttons .success-button:active, .buttons .success-button:focus {
+  outline: none;
   background: #7ad66b;
 }
 .buttons .success-button:disabled {
@@ -1287,6 +1293,7 @@ input[type="radio"] + label .check:after {
   background: #fedfb1;
 }
 .buttons .warning-button:active, .buttons .warning-button:focus {
+  outline: none;
   background: #febd61;
 }
 .buttons .warning-button:disabled {
@@ -1307,6 +1314,7 @@ input[type="radio"] + label .check:after {
   background: #fcb4aa;
 }
 .buttons .error-button:active, .buttons .error-button:focus {
+  outline: none;
   background: #fa705a;
 }
 .buttons .error-button:disabled {
@@ -1327,6 +1335,7 @@ input[type="radio"] + label .check:after {
   background: #11a7f7;
 }
 .buttons .tiny-button:active, .buttons .tiny-button:focus {
+  outline: none;
   background: #0675b0;
 }
 .buttons .tiny-button:disabled {
@@ -1347,6 +1356,7 @@ input[type="radio"] + label .check:after {
   background: #11a7f7;
 }
 .buttons .small-button:active, .buttons .small-button:focus {
+  outline: none;
   background: #0675b0;
 }
 .buttons .small-button:disabled {
@@ -1367,6 +1377,7 @@ input[type="radio"] + label .check:after {
   background: #11a7f7;
 }
 .buttons .medium-button:active, .buttons .medium-button:focus {
+  outline: none;
   background: #0675b0;
 }
 .buttons .medium-button:disabled {
@@ -1387,6 +1398,7 @@ input[type="radio"] + label .check:after {
   background: #11a7f7;
 }
 .buttons .large-button:active, .buttons .large-button:focus {
+  outline: none;
   background: #0675b0;
 }
 .buttons .large-button:disabled {
@@ -1413,6 +1425,7 @@ input[type="radio"] + label .check:after {
   background: #11a7f7;
 }
 .button-sizes .default-button:active, .button-sizes .default-button:focus {
+  outline: none;
   background: #0675b0;
 }
 .button-sizes .default-button:disabled {
