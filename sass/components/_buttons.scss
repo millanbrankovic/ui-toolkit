@@ -67,6 +67,7 @@ $btn-default-color: #fff;
 
     &:active,
     &:focus {
+        outline: none;
         background: darken($btn-bg, 8%);
     }
 
