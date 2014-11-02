@@ -15,7 +15,7 @@
     font-size: rem-calc(13);
     text-align: right;
     text-transform: uppercase;
-    user-select: none;
+    @include user-select(none);
     background: darken($light-color, 90%);
     border-bottom: 1px solid darken($light-color, 70%);
 
