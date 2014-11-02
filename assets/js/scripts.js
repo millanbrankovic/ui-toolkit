@@ -6,6 +6,6 @@ $(document).ready(function() {
     });
 });
 
-$(window).on("scroll touchmove", function () {
-    $(".header, .header h1, .main-nav, .drop-down-menu").toggleClass("sticky", $(document).scrollTop() > 356);
+$(window).on('scroll touchmove', function () {
+    $(".header, .header h1, .main-nav, .toogle-menu, .drop-down-menu").toggleClass("sticky", $(document).scrollTop() > 356);
 });

@@ -9,8 +9,8 @@
     text-align: center;
     z-index: 2;
     position: fixed;
-    background: rgba($light-color, .3);
-    transition: all .5s ease;
+    background: rgba($light-color, .4);
+    @include transition(all .5s ease);
 
     &.sticky {
         height: 70px;
@@ -23,7 +23,7 @@
             weight: 100;
             family: $base-font-light;
         }
-        transition: all .5s ease;
+        @include transition(all .5s ease);
 
         &.sticky {
             color: $light-color;
@@ -40,7 +40,7 @@
         @include col(12);
         top: rem-calc(8);
         position: relative;
-        transition: all .5s ease;
+        @include transition(all .5s ease);
 
         &.sticky {
             top: 0;

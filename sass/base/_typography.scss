@@ -40,6 +40,11 @@
 // Headings
 // --------------------------------------------------
 
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    line-height: 1.4;
+}
+
 h1 {
     font-size: $h1-sml-size;
 
@@ -117,8 +122,8 @@ h6 {
 // --------------------------------------------------
 
 p {
+    color: #777;
     font-size: $paragraph-sml-size;
-    line-height: $paragraph-line-height;
 
     @include screen($medium) {
         font-size: $paragraph-med-size;

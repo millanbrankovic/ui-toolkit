@@ -6,3 +6,34 @@
 .inner-content {
     @include row();
 }
+
+
+.headline {
+    @extend %row;
+    @include row();
+    padding: rem-calc(25 15);
+
+    h3 {
+        font-weight: 400;
+        font-family: $base-font-strong;
+    }
+
+    h4 {
+        font-family: $base-font-light;
+    }
+}
+
+
+%block {
+    @extend %col;
+}
+
+%block-inner {
+    @extend %panel;
+}
+
+
+%caption {
+    @extend %col;
+    @include col(12);
+}

@@ -3,10 +3,100 @@
 //
 
 
+// Main
 .main {
     top: 480px;
     width: 100%;
     z-index: 1;
+    text-align: center;
     position: absolute;
     background: $light-color;
 }
+
+
+// Content
+.content {
+    padding: rem-calc(25 0);
+
+    h5 {
+        padding-bottom: rem-calc(10);
+        border-bottom: $base-border;
+        text-transform: uppercase;
+    }
+
+    h6 {
+        margin: rem-calc(0 0 15);
+    }
+}
+
+
+// Captions
+.grid-caption,
+.buttons-caption {
+    @extend %caption;
+}
+
+
+// Grid-System
+.grid-system {
+    background: #e7f6fe;
+
+    .grid-features {
+        @include screen($medium) {
+            @include col(5);
+        }
+    }
+
+    .how-grid-works {
+        @include screen($medium) {
+            @include col(4);
+        }
+    }
+
+    .grid-images {
+        @include screen($medium) {
+            @include col(3);
+        }
+    }
+}
+
+.grid-features,
+.how-grid-works,
+.grid-images {
+    @extend %block;
+    text-align: left;
+}
+
+.grid-content {
+    @extend %block-inner;
+}
+
+.grid-images {
+    ul {
+        @extend %list-reset;
+    }
+
+    li {
+        @extend %col;
+        @include col(6);
+        margin: rem-calc(0 0 30);
+
+        &:nth-child(2n+1) {
+            padding-left: 0;
+        }
+
+        &:nth-child(2n) {
+            padding-right: 0;
+        }
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+

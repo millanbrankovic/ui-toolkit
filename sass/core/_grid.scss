@@ -29,16 +29,13 @@ $col-gutter: rem-calc(15) !default;
 
 %col {
     float: left;
+    width: 100%;
     position: relative;
     padding: 0 $col-gutter;
 }
 
 @mixin col($col) {
-    width: 100%;
-
-    @include screen($medium) {
-        width: percentage($col / $col-total);
-    }
+    width: percentage($col / $col-total);
 }
 
 
@@ -46,10 +43,10 @@ $col-gutter: rem-calc(15) !default;
 // --------------------------------------------------
 
 %panel {
-    border: 1px solid darken($light-color, 20%);
-    margin: rem-calc(0 0 15);
     padding: rem-calc(15);
-    background: darken($light-color, 10%);
+    margin: rem-calc(0 0 15);
+    background: $light-color;
+    border-radius: $global-radius;
 
     &:after {
         content: "";

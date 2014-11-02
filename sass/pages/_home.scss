@@ -17,7 +17,12 @@
         padding-top: rem-calc(160);
     }
 
-    .headline {
+    .title {
+        @extend %row;
+        @include row();
+    }
+
+    h2 {
         @extend %col;
         @include col(12);
         color: $light-color;
@@ -25,7 +30,7 @@
         font-family: $base-font-strong;
 
         span {
-            display: block;
+            display: inline-block;
             margin: rem-calc(30 0 0);
             color: $light-color;
             font-size: $h3-sml-size;
@@ -36,6 +41,7 @@
             }
 
             @include screen($large) {
+                width: 70%;
                 font-size: $h3-lrg-size;
             }
         }
