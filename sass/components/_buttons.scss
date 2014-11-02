@@ -30,16 +30,18 @@ $btn-default-color: #fff;
     vertical-align: middle;
     text-align: center;
     cursor: pointer;
+    border: none;
+    line-height: 1;
     border-radius: $global-radius;
     transition: all .35s ease;
-    user-select: none;
+    @include user-select(none);
 
     @include screen ($large) {
         width: auto;
     }
 }
 
-@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: rem-calc(10), $btn-margin: false, $btn-width: false) {
+@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false) {
     padding: $btn-padding;
     font-size: $btn-font-size;
     background: $btn-bg;

@@ -17,11 +17,7 @@
     text-transform: uppercase;
     @include user-select(none);
     border-radius: $global-radius;
-    background: rgba($dark-color, .85);
-
-    @include screen($medium) {
-        background: rgba($dark-color, .65);
-    }
+    background: rgba($dark-color, .8);
 
     &.sticky {
         background: $dark-color;
@@ -55,9 +51,17 @@
     max-height: 0;
     overflow: hidden;
     text-align: left;
-    background: rgba($dark-color, .85);
+    background: rgba($dark-color, .95);
     border-radius: $global-radius;
     @include transition(all .5s ease);
+
+    @include screen($medium) {
+        float: right;
+        max-height: 100%;
+        overflow: visible;
+        text-align: center;
+        background: rgba($dark-color, .75);
+    }
 
     &.sticky {
         background: $dark-color;
@@ -70,14 +74,6 @@
     &.expanded {
         max-height: 1000px;
         @include transition(all 1.4s ease);
-    }
-
-    @include screen($medium) {
-        float: right;
-        max-height: 100%;
-        overflow: visible;
-        text-align: center;
-        background: rgba($dark-color, .65);
     }
 
     > li {
@@ -143,7 +139,7 @@
     margin: rem-calc(30 0 0);
     visibility: hidden;
     position: absolute;
-    background: rgba($dark-color, .8);
+    background: rgba($dark-color, .85);
     border-radius: $global-radius;
     @include transition(all .15s ease);
 

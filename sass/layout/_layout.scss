@@ -37,3 +37,27 @@
     @extend %col;
     @include col(12);
 }
+
+
+.sub-caption {
+    min-width: 70%;
+    display: inline-block;
+    font-weight: 100;
+    font-style: italic;
+    font-size: rem-calc(16);
+    color: darken($light-color, 30%);
+    text-transform: none !important;
+
+    @include screen($medium) {
+        min-width: 50%;
+        font-size: rem-calc(18);
+    }
+
+    @include screen($large) {
+        min-width: 30%;
+        font-size: rem-calc(20);
+    }
+}
+
+
+

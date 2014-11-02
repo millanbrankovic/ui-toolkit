@@ -128,7 +128,7 @@ input[type="radio"] {
     + label {
         cursor: pointer;
         position: relative;
-        user-select: none;
+        @include user-select(none);
 
         * {
             transition: all .35s ease;

@@ -9,7 +9,6 @@
     text-align: center;
     z-index: 2;
     position: fixed;
-    background: rgba($light-color, .4);
     @include transition(all .5s ease);
 
     &.sticky {
@@ -27,10 +26,10 @@
 
         &.sticky {
             color: $light-color;
-            font-size: rem-calc(30);
+            font-size: rem-calc(24);
 
             @include screen($medium) {
-                font-size: rem-calc(36);
+                font-size: rem-calc(30);
             }
         }
     }
@@ -43,7 +42,7 @@
         @include transition(all .5s ease);
 
         &.sticky {
-            top: 0;
+            top: rem-calc(6);
         }
     }
 }
