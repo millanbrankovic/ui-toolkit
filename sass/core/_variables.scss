@@ -8,7 +8,7 @@
 
 $light-color: #fff;
 $dark-color: #000;
-$base-font-color: #333;
+$base-font-color: #222;
 $brand-primary: #078fd8;
 $brand-secondary: #e94e77;
 
@@ -32,6 +32,7 @@ $font-smoothing: antialiased;
 // Typography
 // --------------------------------------------------
 
+$base-line-height: 1.6;
 $base-font-size: rem-calc(16) !default;
 $base-font-light: 'open_sanslight';
 $base-font-regular: 'open_sansregular';
@@ -42,41 +43,40 @@ $base-font-strong: 'open_sansbold';
 // --------------------------------------------------
 
 $h1-sml-size: rem-calc(40);
-$h2-sml-size: rem-calc(30);
-$h3-sml-size: rem-calc(20);
-$h4-sml-size: rem-calc(16);
-$h5-sml-size: rem-calc(14);
-$h6-sml-size: rem-calc(12);
+$h2-sml-size: rem-calc(28);
+$h3-sml-size: rem-calc(22);
+$h4-sml-size: rem-calc(18);
+$h5-sml-size: rem-calc(16);
+$h6-sml-size: rem-calc(15);
 
 $h1-med-size: rem-calc(48);
 $h2-med-size: rem-calc(38);
-$h3-med-size: rem-calc(28);
-$h4-med-size: rem-calc(22);
-$h5-med-size: rem-calc(18);
-$h6-med-size: rem-calc(15);
+$h3-med-size: rem-calc(30);
+$h4-med-size: rem-calc(24);
+$h5-med-size: rem-calc(20);
+$h6-med-size: rem-calc(18);
 
-$h1-lrg-size: rem-calc(52);
+$h1-lrg-size: rem-calc(54);
 $h2-lrg-size: rem-calc(42);
-$h3-lrg-size: rem-calc(32);
-$h4-lrg-size: rem-calc(22);
-$h5-lrg-size: rem-calc(16);
-$h6-lrg-size: rem-calc(14);
+$h3-lrg-size: rem-calc(36);
+$h4-lrg-size: rem-calc(28);
+$h5-lrg-size: rem-calc(22);
+$h6-lrg-size: rem-calc(20);
 
 
 // Paragraph
 // --------------------------------------------------
 
 $paragraph-sml-size: rem-calc(14);
-$paragraph-med-size: rem-calc(15);
-$paragraph-lrg-size: rem-calc(16);
-$paragraph-line-height: 1.6;
+$paragraph-med-size: rem-calc(16);
+$paragraph-lrg-size: rem-calc(18);
 
 
 // UI Styles
 // --------------------------------------------------
 
 $global-radius: 3px;
-$global-shadow: 0 0 8px rgba(#000, .2);
-$global-shadow-inset: 0 0 6px rgba(#000, .3);
-$base-border: 1px solid darken($light-color, 20%);
+$global-shadow: 0 0 8px rgba($dark-color, .2);
+$global-shadow-inset: 0 0 6px rgba($dark-color, .3);
+$base-border: 1px solid darken($light-color, 15%);
 

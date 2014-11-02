@@ -29,16 +29,13 @@ $col-gutter: rem-calc(15) !default;
 
 %col {
     float: left;
+    width: 100%;
     position: relative;
     padding: 0 $col-gutter;
 }
 
 @mixin col($col) {
-    width: 100%;
-
-    @include screen($medium) {
-        width: percentage($col / $col-total);
-    }
+    width: percentage($col / $col-total);
 }
 
 

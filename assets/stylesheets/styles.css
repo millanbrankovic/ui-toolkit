@@ -111,6 +111,7 @@ dfn {
 }
 
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -275,6 +276,8 @@ input[type="radio"] {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -331,7 +334,6 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'open_sansregular';
   src: url("../../assets/fonts/opensans-regular-webfont.eot");
@@ -339,7 +341,6 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'open_sansbold';
   src: url("../../assets/fonts/opensans-bold-webfont.eot");
@@ -347,7 +348,6 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-
 h1 {
   font-size: 2.5rem;
 }
@@ -358,12 +358,12 @@ h1 {
 }
 @media (min-width: 64.06rem) {
   h1 {
-    font-size: 3.25rem;
+    font-size: 3.375rem;
   }
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 @media (min-width: 40.06rem) {
   h2 {
@@ -377,73 +377,72 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
 }
 @media (min-width: 40.06rem) {
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.875rem;
   }
 }
 @media (min-width: 64.06rem) {
   h3 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 @media (min-width: 40.06rem) {
   h4 {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 64.06rem) {
   h4 {
-    font-size: 1.375rem;
+    font-size: 1.75rem;
   }
 }
 
 h5 {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 @media (min-width: 40.06rem) {
   h5 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 64.06rem) {
   h5 {
-    font-size: 1rem;
+    font-size: 1.375rem;
   }
 }
 
 h6 {
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
 }
 @media (min-width: 40.06rem) {
   h6 {
-    font-size: 0.9375rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 64.06rem) {
   h6 {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
   }
 }
 
 p {
   font-size: 0.875rem;
-  line-height: 1.6;
 }
 @media (min-width: 40.06rem) {
   p {
-    font-size: 0.9375rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 64.06rem) {
   p {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -452,7 +451,7 @@ p {
 }
 
 body, html {
-  color: #333333;
+  color: #222;
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -465,8 +464,7 @@ a {
   line-height: 1;
   color: #078fd8;
   text-decoration: none;
-  -webkit-transition: all .35s ease;
-          transition: all .35s ease;
+  transition: all .35s ease;
 }
 a:hover {
   color: #4cbdf9;
