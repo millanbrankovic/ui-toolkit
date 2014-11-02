@@ -1,3 +1,50 @@
 // Header
 //------------------------------------------------------------
 //
+
+
+.header {
+    width: 100%;
+    height: rem-calc(100);
+    text-align: center;
+    z-index: 2;
+    position: fixed;
+    background: rgba($light-color, .4);
+    transition: all .5s ease;
+
+    &.sticky {
+        height: 70px;
+        background: $dark-color;
+    }
+
+    h1 {
+        margin: 0;
+        font: {
+            weight: 100;
+            family: $base-font-light;
+        }
+        transition: all .5s ease;
+
+        &.sticky {
+            color: $light-color;
+            font-size: rem-calc(30);
+
+            @include screen($medium) {
+                font-size: rem-calc(36);
+            }
+        }
+    }
+
+    .main-nav {
+        @extend %col;
+        @include col(12);
+        top: rem-calc(8);
+        position: relative;
+        transition: all .5s ease;
+
+        &.sticky {
+            top: 0;
+        }
+    }
+}
+

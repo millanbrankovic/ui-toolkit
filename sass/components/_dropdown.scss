@@ -16,8 +16,8 @@
     text-align: right;
     text-transform: uppercase;
     user-select: none;
-    background: darken($light-color, 90%);
-    border-bottom: 1px solid darken($light-color, 70%);
+    border-radius: $global-radius;
+    background: rgba($dark-color, .65);
 
     span {
         margin: rem-calc(0 15 0 0);
@@ -42,44 +42,56 @@
 
 .drop-down-menu {
     @extend %list-reset;
+    width: 100%;
     font-size: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height .6s ease;
+    text-align: left;
+    transition: all .5s ease;
+    background: rgba($dark-color, .65);
+    border-radius: $global-radius;
+
+    &.sticky {
+        background: $dark-color;
+        border: 1px solid rgba($light-color, .2);
+    }
 
     &.expanded {
         max-height: 1000px;
-        transition: max-height 1.4s ease;
+        transition: all 1.4s ease;
     }
 
     @include screen($medium) {
         float: right;
         max-height: 100%;
         overflow: visible;
+        text-align: center;
     }
 
     > li {
         display: block;
         position: relative;
         font-size: rem-calc(14);
-        border-bottom: 1px solid darken($light-color, 70%);
-        background: darken($light-color, 90%);
+        border-bottom: 1px solid rgba($light-color, .2);
 
         @include screen($medium) {
             display: inline-block;
             border-bottom: none;
-            border-left: 1px solid darken($light-color, 70%);
+            border-right: 1px solid rgba($light-color, .2);
         }
 
-        @include screen($medium) {
-            &:first-child {
-                border: none;
+        &:first-child {
+            border-top: 1px solid rgba($light-color, .2);
+
+            @include screen($medium) {
+                border-top: none;
+                border-left: 1px solid rgba($light-color, .2);
             }
         }
 
         &:hover {
             > .drop-down {
-                margin: 0;
+                margin: rem-calc(10 0 0);
                 opacity: 1;
                 visibility: visible;
             }
@@ -87,13 +99,13 @@
 
         > a {
             display: block;
-            color: darken($light-color, 40%);
+            color: rgba($light-color, .7);
             padding: rem-calc(15 25);
             text-transform: uppercase;
 
             &:hover {
-                color: $light-color;
-                background: $brand-primary;
+                color: $brand-primary;
+                background: $dark-color;
             }
         }
     }
@@ -116,17 +128,37 @@
     left: 0;
     right: 0;
     opacity: 0;
-    margin: rem-calc(20 0 0);
+    margin: rem-calc(30 0 0);
     visibility: hidden;
     position: absolute;
-    background: darken($light-color, 78%);
+    background: rgba($dark-color, .8);
     transition: all .15s ease;
+    border-radius: $global-radius;
+
+    &:before {
+        content: "";
+        height: rem-calc(12);
+        top: rem-calc(-12);
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
 
     li {
-        border-bottom: 1px solid darken($light-color, 65%);
+        border-bottom: 1px solid rgba($light-color, .2);
+
+        &:first-child {
+            a {
+                border-radius: $global-radius $global-radius 0 0;
+            }
+        }
 
         &:last-child {
             border-bottom: none;
+
+            a {
+                border-radius: 0 0 $global-radius $global-radius;
+            }
         }
     }
 
@@ -134,7 +166,7 @@
         display: block;
         position: relative;
         padding: rem-calc(15 10);
-        color: darken($light-color, 40%);
+        color: rgba($light-color, .7);
 
         &:hover {
             color: $light-color;
@@ -155,7 +187,7 @@
                     transition: all .3s ease;
                     border-left: 8px solid transparent;
                     border-right: 8px solid transparent;
-                    border-bottom: 8px solid darken($light-color, 78%);
+                    border-bottom: 8px solid rgba($dark-color, .8);
                     transform: translateX(-50%);
                 }
 

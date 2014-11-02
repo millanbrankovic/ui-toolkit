@@ -11,11 +11,15 @@ body, html {
     color: $base-font-color;
     font: {
         size: $base-font-size;
-        family: $body-font-family;
+        family: $base-font-regular;
     }
 }
 
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 a {
     line-height: 1;

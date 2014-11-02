@@ -7,6 +7,7 @@
 // --------------------------------------------------
 
 $light-color: #fff;
+$dark-color: #000;
 $base-font-color: #222;
 $brand-primary: #078fd8;
 $brand-secondary: #333;
@@ -40,18 +41,34 @@ $base-font-strong: 'open_sansbold';
 // Headings
 // --------------------------------------------------
 
-$h1-size: rem-calc(44);
-$h2-size: rem-calc(37);
-$h3-size: rem-calc(27);
-$h4-size: rem-calc(23);
-$h5-size: rem-calc(18);
-$h6-size: rem-calc(16);
+$h1-sml-size: rem-calc(40);
+$h2-sml-size: rem-calc(30);
+$h3-sml-size: rem-calc(20);
+$h4-sml-size: rem-calc(16);
+$h5-sml-size: rem-calc(14);
+$h6-sml-size: rem-calc(12);
+
+$h1-med-size: rem-calc(48);
+$h2-med-size: rem-calc(38);
+$h3-med-size: rem-calc(28);
+$h4-med-size: rem-calc(22);
+$h5-med-size: rem-calc(18);
+$h6-med-size: rem-calc(15);
+
+$h1-lrg-size: rem-calc(52);
+$h2-lrg-size: rem-calc(42);
+$h3-lrg-size: rem-calc(32);
+$h4-lrg-size: rem-calc(22);
+$h5-lrg-size: rem-calc(16);
+$h6-lrg-size: rem-calc(14);
 
 
 // Paragraph
 // --------------------------------------------------
 
-$paragraph-size: rem-calc(16);
+$paragraph-sml-size: rem-calc(14);
+$paragraph-med-size: rem-calc(15);
+$paragraph-lrg-size: rem-calc(16);
 $paragraph-line-height: 1.6;
 
 
