@@ -7,5 +7,5 @@ $(document).ready(function() {
 });
 
 $(window).on("scroll touchmove", function () {
-    $(".header, .header h1, .main-nav, .drop-down-menu").toggleClass("sticky", $(document).scrollTop() > 395);
+    $(".header, .header h1, .main-nav, .drop-down-menu").toggleClass("sticky", $(document).scrollTop() > 356);
 });

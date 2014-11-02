@@ -476,7 +476,7 @@ p {
 }
 
 body, html {
-  color: #222222;
+  color: #333333;
   font-size: 16px;
   font-family: "open_sansregular";
 }
@@ -953,7 +953,7 @@ input[type="radio"] + label .check:after {
   text-align: center;
   z-index: 2;
   position: fixed;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   -webkit-transition: all .5s ease;
           transition: all .5s ease;
 }
