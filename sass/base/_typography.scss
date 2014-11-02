@@ -40,24 +40,92 @@
 // Headings
 // --------------------------------------------------
 
-h1 { font-size: $h1-size; }
+h1 {
+    font-size: $h1-sml-size;
 
-h2 { font-size: $h2-size; }
+    @include screen($medium) {
+        font-size: $h1-med-size;
+    }
 
-h3 { font-size: $h3-size; }
+    @include screen($large) {
+        font-size: $h1-lrg-size;
+    }
+}
 
-h4 { font-size: $h4-size; }
+h2 {
+    font-size: $h2-sml-size;
 
-h5 { font-size: $h5-size; }
+    @include screen($medium) {
+        font-size: $h2-med-size;
+    }
 
-h6 { font-size: $h6-size; }
+    @include screen($large) {
+        font-size: $h2-lrg-size;
+    }
+}
+
+h3 {
+    font-size: $h3-sml-size;
+
+    @include screen($medium) {
+        font-size: $h3-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h3-lrg-size;
+    }
+}
+
+h4 {
+    font-size: $h4-sml-size;
+
+    @include screen($medium) {
+        font-size: $h4-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h4-lrg-size;
+    }
+}
+
+h5 {
+    font-size: $h5-sml-size;
+
+    @include screen($medium) {
+        font-size: $h5-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h5-lrg-size;
+    }
+}
+
+h6 {
+    font-size: $h6-sml-size;
+
+    @include screen($medium) {
+        font-size: $h6-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h6-lrg-size;
+    }
+}
 
 
 // Paragraph
 // --------------------------------------------------
 
 p {
-    font-size: $paragraph-size;
+    font-size: $paragraph-sml-size;
     line-height: $paragraph-line-height;
+
+    @include screen($medium) {
+        font-size: $paragraph-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $paragraph-lrg-size;
+    }
 }
 

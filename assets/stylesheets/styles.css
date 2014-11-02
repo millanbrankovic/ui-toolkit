@@ -349,32 +349,102 @@ table {
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
+}
+@media (min-width: 40.06rem) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 64.06rem) {
+  h1 {
+    font-size: 3.25rem;
+  }
 }
 
 h2 {
-  font-size: 2.3125rem;
+  font-size: 1.875rem;
+}
+@media (min-width: 40.06rem) {
+  h2 {
+    font-size: 2.375rem;
+  }
+}
+@media (min-width: 64.06rem) {
+  h2 {
+    font-size: 2.625rem;
+  }
 }
 
 h3 {
-  font-size: 1.6875rem;
+  font-size: 1.25rem;
+}
+@media (min-width: 40.06rem) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 64.06rem) {
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 h4 {
-  font-size: 1.4375rem;
+  font-size: 1rem;
+}
+@media (min-width: 40.06rem) {
+  h4 {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 64.06rem) {
+  h4 {
+    font-size: 1.375rem;
+  }
 }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
+}
+@media (min-width: 40.06rem) {
+  h5 {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 64.06rem) {
+  h5 {
+    font-size: 1rem;
+  }
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 0.75rem;
+}
+@media (min-width: 40.06rem) {
+  h6 {
+    font-size: 0.9375rem;
+  }
+}
+@media (min-width: 64.06rem) {
+  h6 {
+    font-size: 0.875rem;
+  }
 }
 
 p {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.6;
+}
+@media (min-width: 40.06rem) {
+  p {
+    font-size: 0.9375rem;
+  }
+}
+@media (min-width: 64.06rem) {
+  p {
+    font-size: 1rem;
+  }
 }
 
 *, *:before, *:after {
@@ -382,7 +452,7 @@ p {
 }
 
 body, html {
-  color: #222222;
+  color: #333333;
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
 }
