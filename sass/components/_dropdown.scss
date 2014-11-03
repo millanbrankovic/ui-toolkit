@@ -41,7 +41,7 @@
 // --------------------------------------------------
 
 .drop-down-menu {
-    @extend %list-reset;
+    @extend %reset-list;
     font-size: 0;
     max-height: 0;
     overflow: hidden;
@@ -112,7 +112,7 @@
 }
 
 .drop-down {
-    @extend %list-reset;
+    @extend %reset-list;
     left: 0;
     right: 0;
     opacity: 0;
