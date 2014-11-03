@@ -23,15 +23,6 @@
             family: $base-font-light;
         }
         @include transition(all .5s ease);
-
-        &.sticky {
-            color: $light-color;
-            font-size: rem-calc(24);
-
-            @include screen($medium) {
-                font-size: rem-calc(30);
-            }
-        }
     }
 
     .main-nav {
@@ -40,10 +31,5 @@
         top: rem-calc(8);
         position: relative;
         @include transition(all .5s ease);
-
-        &.sticky {
-            top: rem-calc(6);
-        }
     }
 }
-

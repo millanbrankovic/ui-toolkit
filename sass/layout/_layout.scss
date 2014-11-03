@@ -8,10 +8,39 @@
 }
 
 
+.sticky {
+    h1 {
+        color: $light-color;
+        font-size: rem-calc(24);
+
+        @include screen($medium) {
+            font-size: rem-calc(30);
+        }
+    }
+
+    .toogle-menu {
+        background: $dark-color;
+    }
+
+    .main-nav {
+        top: rem-calc(6);
+    }
+
+    .drop-down-menu {
+        background: $dark-color;
+
+        @include screen($medium) {
+            border: 1px solid rgba($light-color, .2);
+        }
+    }
+}
+
+
 .headline {
     @extend %row;
     @include row();
     padding: rem-calc(25 15);
+    text-align: center;
 
     h3 {
         font-weight: 400;
@@ -36,17 +65,30 @@
 %caption {
     @extend %col;
     @include col(12);
+    line-height: 2;
+    border-bottom: $base-border;
+    text-transform: uppercase;
 }
 
 
 .sub-caption {
-    min-width: 70%;
-    display: inline-block;
     font-weight: 100;
     font-style: italic;
     font-size: rem-calc(16);
     color: darken($light-color, 30%);
-    text-transform: none !important;
+    text-transform: none;
+    border: none;
+
+    &:after {
+        content: "";
+        width: 30%;
+        height: 1px;
+        left: 50%;
+        bottom: 0;
+        position: absolute;
+        background: darken($light-color, 15%);
+        @include transform(translateX(-50%));
+    }
 
     @include screen($medium) {
         min-width: 50%;

@@ -8,7 +8,6 @@
     top: 480px;
     width: 100%;
     z-index: 1;
-    text-align: center;
     position: absolute;
     background: $light-color;
 }
@@ -17,12 +16,7 @@
 // Content
 .content {
     padding: rem-calc(25 0);
-
-    h5 {
-        padding-bottom: rem-calc(10);
-        border-bottom: $base-border;
-        text-transform: uppercase;
-    }
+    text-align: center;
 
     h6 {
         margin: rem-calc(0 0 15);
@@ -31,8 +25,7 @@
 
 
 // Captions
-.grid-caption,
-.buttons-caption {
+.caption {
     @extend %caption;
 }
 
@@ -73,7 +66,7 @@
 
 .grid-images {
     ul {
-        @extend %list-reset;
+        @extend %reset-list;
     }
 
     li {
@@ -94,13 +87,24 @@
             margin-bottom: 0;
         }
     }
+
+    img {
+        border-radius: $global-radius;
+        border: 1px solid transparent;
+        @include transition(all .35s ease);
+
+        &:hover {
+            border: 1px solid $light-color;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(102, 175, 233, .6);
+        }
+    }
 }
 
 
 // Button-Samples
 .buttons {
     ul {
-        @extend %list-reset;
+        @extend %reset-list;
         font-size: 0;
     }
 
@@ -117,51 +121,6 @@
             width: auto;
         }
     }
-
-    button {
-        @extend %btn;
-        @include btn();
-    }
-
-    .default-button {
-        @include btn($btn-bg: $btn-default-color);
-    }
-
-    .brand-button {
-        @include btn($btn-bg: $btn-brand-color, $btn-color: $light-color);
-    }
-
-    .info-button {
-        @include btn($btn-bg: $info-color);
-    }
-
-    .success-button {
-        @include btn($btn-bg: $success-color, $btn-color: $light-color);
-    }
-
-    .warning-button {
-        @include btn($btn-bg: $warning-color, $btn-color: $light-color);
-    }
-
-    .error-button {
-        @include btn($btn-bg: $error-color, $btn-color: $light-color);
-    }
-
-    .tiny-button {
-        @include btn($btn-padding: $btn-tny, $btn-font-size: $btn-tny-font-size);
-    }
-
-    .small-button {
-        @include btn($btn-padding: $btn-sml, $btn-font-size: $btn-sml-font-size);
-    }
-
-    .medium-button {
-        @include btn($btn-padding: $btn-med, $btn-font-size: $btn-med-font-size);
-    }
-
-    .large-button {
-        @include btn($btn-padding: $btn-lrg, $btn-font-size: $btn-lrg-font-size);
-    }
 }
 
 .button-samples,
@@ -173,6 +132,56 @@
 .button-sizes {
     .default-button {
         @include btn($btn-bg: $btn-brand-color);
+    }
+}
+
+
+
+// Forms
+.forms {
+    background: darken($light-color, 4%);
+}
+
+.form-example,
+.custom-form-example {
+    @extend %col;
+    @include col(12);
+    text-align: left;
+
+    @include screen($medium) {
+        @include col(6);
+    }
+
+    input[type="submit"] {
+        float: right;
+    }
+
+    ul {
+        @extend %reset-list;
+    }
+}
+
+.location-selection,
+.city-selection {
+    .custom-inputs {
+        display: block;
+    }
+
+    select {
+        margin: 0;
+    }
+}
+
+.city-selection {
+    @extend %col;
+    margin: rem-calc(17 0 0);
+
+    @include screen($medium) {
+        @include col(6);
+    }
+
+    > label {
+        display: block;
     }
 }
 

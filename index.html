@@ -60,15 +60,13 @@
                 This is only a brief summary of how a web page can look like using UIToolKity
             </h4>
             <p>
-                This demo page contains all the elements that you can find in UIToolKity including CORE styles that are neccessary for a consistent layout suchs as grid system, mediaqueries, mixins, variables, functions, then some of the UI COMPONENTS suchs as buttons, alerts, forms and drop-down menu and some of the BASE typography styles.
+                This demo page contains all the elements that you can find in UIToolKity including <a href="https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core" target="_blank">CORE</a> styles that are neccessary for a consistent layout suchs as grid system, mediaqueries, mixins, variables, functions, then some of the UI <a href="https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components" target="_blank">COMPONENTS</a> suchs as buttons, alerts, forms and drop-down menu and some of the <a href="https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base" target="_blank">BASE</a> typography styles.
             </p>
         </div>
 
         <section class="content grid-system">
             <div class="inner-content">
-                <div class="grid-caption">
-                    <h5>Grid System</h5>
-                </div>
+                <h5 class="caption">Grid System</h5>
                 <div class="grid-features">
                     <div class="grid-content">
                         <h6>Grid Features</h6>
@@ -115,9 +113,7 @@
 
         <section class="content buttons">
             <div class="inner-content">
-                <div class="buttons-caption">
-                    <h5>Button Samples</h5>
-                </div>
+                <h5 class="caption">Button Samples</h5>
                 <div class="button-samples">
                     <ul>
                         <li>
@@ -143,9 +139,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="buttons-caption">
-                    <h5 class="sub-caption">Button Sizes</h5>
-                </div>
+                <h5 class="caption sub-caption">Button Sizes</h5>
                 <div class="button-sizes">
                     <ul>
                         <li>
@@ -165,6 +159,176 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section class="content forms">
+            <div class="inner-content">
+                <h5 class="caption">Forms</h5>
+                <form class="form-example">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email...">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Your Password...">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+
+                <form class="custom-form-example">
+                    <fieldset>
+                        <legend>Custom Inputs</legend>
+                        <div class="location-selection">
+                            <label for="location">Location</label>
+                            <div class="custom-inputs select">
+                                <select name="location" id="location">
+                                    <option value="">Asia</option>
+                                    <option value="">Africa</option>
+                                    <option value="">North America</option>
+                                    <option value="">South America</option>
+                                    <option value="">Antarctica</option>
+                                    <option value="">Europe</option>
+                                    <option value="">Australia</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="city-selection">
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox1">
+                                <label for="checkbox1">
+                                    <span class="check"></span>
+                                    <span class="label">Bangkok</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox2">
+                                <label for="checkbox2">
+                                    <span class="check"></span>
+                                    <span class="label">Cape Town</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox3">
+                                <label for="checkbox3">
+                                    <span class="check"></span>
+                                    <span class="label">Washington</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox4" disabled>
+                                <label for="checkbox4">
+                                    <span class="check"></span>
+                                    <span class="label">Rio de Janeiro</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox5">
+                                <label for="checkbox5">
+                                    <span class="check"></span>
+                                    <span class="label">Paris</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox6" disabled>
+                                <label for="checkbox6">
+                                    <span class="check"></span>
+                                    <span class="label">Canberra</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox7">
+                                <label for="checkbox7">
+                                    <span class="check"></span>
+                                    <span class="label">Belgrade</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox8">
+                                <label for="checkbox8">
+                                    <span class="check"></span>
+                                    <span class="label">Barcelona</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="checkbox" name="checkbox" value="value" id="checkbox9" disabled>
+                                <label for="checkbox9">
+                                    <span class="check"></span>
+                                    <span class="label">New York</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="city-selection">
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio1">
+                                <label for="radio1">
+                                    <span class="check"></span>
+                                    <span class="label">Bangkok</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio2">
+                                <label for="radio2">
+                                    <span class="check"></span>
+                                    <span class="label">Cape Town</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio3" disabled>
+                                <label for="radio3">
+                                    <span class="check"></span>
+                                    <span class="label">Washington</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio4">
+                                <label for="radio4">
+                                    <span class="check"></span>
+                                    <span class="label">Rio de Janeiro</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio5" disabled>
+                                <label for="radio5">
+                                    <span class="check"></span>
+                                    <span class="label">Paris</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio6">
+                                <label for="radio6">
+                                    <span class="check"></span>
+                                    <span class="label">Los Angeles</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio7" disabled>
+                                <label for="radio7">
+                                    <span class="check"></span>
+                                    <span class="label">Rome</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio8">
+                                <label for="radio8">
+                                    <span class="check"></span>
+                                    <span class="label">San Francisko</span>
+                                </label>
+                            </div>
+                            <div class="custom-inputs">
+                                <input type="radio" name="radio" value="value" id="radio9">
+                                <label for="radio9">
+                                    <span class="check"></span>
+                                    <span class="label">Belgrade</span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </section>
     </main>

@@ -1,11 +1,10 @@
 // Scripts
 
-$(document).ready(function() {
+(function () {
     $(".toogle-menu").on('click', function() {
         $(".drop-down-menu").toggleClass("expanded");
     });
-});
-
-$(window).on('scroll touchmove', function () {
-    $(".header, .header h1, .main-nav, .toogle-menu, .drop-down-menu").toggleClass("sticky", $(document).scrollTop() > 356);
-});
+    $(window).on('scroll touchmove', function () {
+        $(".header").toggleClass("sticky", $(document).scrollTop() > 356);
+    });
+})();

@@ -17,11 +17,7 @@
     text-transform: uppercase;
     @include user-select(none);
     border-radius: $global-radius;
-    background: rgba($dark-color, .8);
-
-    &.sticky {
-        background: $dark-color;
-    }
+    background: rgba(#000, .7);
 
     span {
         margin: rem-calc(0 15 0 0);
@@ -45,13 +41,13 @@
 // --------------------------------------------------
 
 .drop-down-menu {
-    @extend %list-reset;
+    @extend %reset-list;
     width: 100%;
     font-size: 0;
     max-height: 0;
     overflow: hidden;
     text-align: left;
-    background: rgba($dark-color, .95);
+    background: rgba(#000, .85);
     border-radius: $global-radius;
     @include transition(all .5s ease);
 
@@ -60,15 +56,7 @@
         max-height: 100%;
         overflow: visible;
         text-align: center;
-        background: rgba($dark-color, .75);
-    }
-
-    &.sticky {
-        background: $dark-color;
-
-        @include screen($medium) {
-            border: 1px solid rgba($light-color, .2);
-        }
+        background: rgba(#000, .6);
     }
 
     &.expanded {
@@ -132,7 +120,7 @@
 }
 
 .drop-down {
-    @extend %list-reset;
+    @extend %reset-list;
     left: 0;
     right: 0;
     opacity: 0;
@@ -158,33 +146,7 @@
         &:first-child {
             a {
                 border-radius: $global-radius $global-radius 0 0;
-            }
-        }
 
-        &:last-child {
-            border-bottom: none;
-
-            a {
-                border-radius: 0 0 $global-radius $global-radius;
-            }
-        }
-    }
-
-    a {
-        display: block;
-        position: relative;
-        padding: rem-calc(15 10);
-        color: rgba($light-color, .7);
-
-        &:hover {
-            color: $light-color;
-            background: $brand-primary;
-        }
-    }
-
-    > li {
-        &:first-child {
-            a {
                 &:before {
                     content: "";
                     width: 0;
@@ -208,9 +170,15 @@
                 }
             }
         }
-    }
 
-    li {
+        &:last-child {
+            border-bottom: none;
+
+            a {
+                border-radius: 0 0 $global-radius $global-radius;
+            }
+        }
+
         &.has-drop-down {
             position: relative;
 
@@ -231,6 +199,18 @@
                 opacity: 1;
                 visibility: visible;
             }
+        }
+    }
+
+    a {
+        display: block;
+        position: relative;
+        padding: rem-calc(15 10);
+        color: rgba($light-color, .7);
+
+        &:hover {
+            color: $light-color;
+            background: $brand-primary;
         }
     }
 
