@@ -54,6 +54,11 @@
 
 .fright { float: right; }
 
+.text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 %reset-list {
     margin: 0;
     padding: 0;

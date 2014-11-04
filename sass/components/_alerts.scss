@@ -19,37 +19,37 @@
         right: 0;
         position: absolute;
         cursor: pointer;
-        line-height: .6;
+        line-height: .5;
         text-align: center;
-        font-size: rem-calc(18);
+        font-size: rem-calc(22);
     }
 }
 
-%alert-error {
+%info-alert {
     @extend %alert;
-    color: darken($error-color, 35%);
-    border-color: darken($error-color, 12%);
-    background: $error-color;
+    color: darken($info-color, 35%);
+    border-color: darken($info-color, 12%);
+    background: $info-color;
 }
 
-%alert-success {
+%success-alert {
     @extend %alert;
     color: darken($success-color, 35%);
     border-color: darken($success-color, 12%);
     background: $success-color;
 }
 
-%alert-warning {
+%warning-alert {
     @extend %alert;
     color: darken($warning-color, 35%);
     border-color: darken($warning-color, 12%);
     background: $warning-color;
 }
 
-%alert-info {
+%error-alert {
     @extend %alert;
-    color: darken($info-color, 35%);
-    border-color: darken($info-color, 12%);
-    background: $info-color;
+    color: darken($error-color, 35%);
+    border-color: darken($error-color, 12%);
+    background: $error-color;
 }
 

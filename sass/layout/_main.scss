@@ -5,10 +5,7 @@
 
 // Main
 .main {
-    top: 480px;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
+    margin: rem-calc(480 0 0);
     background: $light-color;
 }
 
@@ -17,10 +14,6 @@
 .content {
     padding: rem-calc(25 0);
     text-align: center;
-
-    h6 {
-        margin: rem-calc(0 0 15);
-    }
 }
 
 
@@ -33,6 +26,10 @@
 // Grid-System
 .grid-system {
     background: #def5ff;
+
+    h6 {
+        margin: rem-calc(0 0 15);
+    }
 
     .grid-features {
         @include screen($medium) {
@@ -186,6 +183,31 @@
 }
 
 
+// Alerts
+.alerts-samples {
+    @extend %col;
+    @include col(12);
+    font-size: 0;
+}
 
+.alert {
+    @extend %alert;
+    margin: rem-calc(0 0 15);
+}
 
+.info-alert {
+    @extend %info-alert;
+}
+
+.success-alert {
+    @extend %success-alert;
+}
+
+.warning-alert {
+    @extend %warning-alert;
+}
+
+.error-alert {
+    @extend %error-alert;
+}
 

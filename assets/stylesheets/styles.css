@@ -334,6 +334,11 @@ table {
   float: right;
 }
 
+.text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .drop-down-menu, .drop-down, .grid-images ul, .buttons ul, .form-example ul,
 .custom-form-example ul {
   margin: 0;
@@ -350,7 +355,7 @@ table {
 .how-grid-works,
 .grid-images, .caption, .header .main-nav, .grid-images li, .button-samples,
 .button-sizes, .form-example,
-.custom-form-example, .city-selection, .hero h2 {
+.custom-form-example, .city-selection, .alerts-samples, .hero h2 {
   float: left;
   width: 100%;
   position: relative;
@@ -499,6 +504,40 @@ p {
   }
 }
 
+@font-face {
+  font-family: 'UIToolKity';
+  src: url("../../assets/fonts/UIToolKity.eot?414bbo");
+  src: url("../../assets/fonts/UIToolKity.eot?#iefix414bbo") format("embedded-opentype"), url("../../assets/fonts/UIToolKity.woff?414bbo") format("woff"), url("../../assets/fonts/UIToolKity.ttf?414bbo") format("truetype"), url("../../assets/fonts/UIToolKity.svg?414bbo#UIToolKity") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.ico {
+  font-family: 'UIToolKity';
+  font-size: 1rem;
+  line-height: 1;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down:before {
+  content: "\e600";
+}
+
+.ico-arrow-up:before {
+  content: "\e601";
+}
+
+.ico-checkmark:before {
+  content: "\e602";
+}
+
 *, *:before, *:after {
   box-sizing: border-box !important;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -508,7 +547,7 @@ p {
 body, html {
   color: #222;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "open_sansregular";
 }
 
@@ -529,6 +568,51 @@ a:hover {
 }
 a:active {
   color: #056ea7;
+}
+
+.info-alert, .success-alert, .warning-alert, .error-alert, .alert {
+  display: block;
+  padding: 0.75rem;
+  cursor: default;
+  position: relative;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.info-alert .close, .success-alert .close, .warning-alert .close, .error-alert .close, .alert .close {
+  padding: 0.4375rem;
+  top: 0;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+  line-height: .5;
+  text-align: center;
+  font-size: 1.375rem;
+}
+
+.info-alert {
+  color: #1dace7;
+  border-color: #87d3f2;
+  background: #bee7f8;
+}
+
+.success-alert {
+  color: #379028;
+  border-color: #6cd25b;
+  background: #97df8b;
+}
+
+.warning-alert {
+  color: #d37d02;
+  border-color: #fdb54c;
+  background: #fece89;
+}
+
+.error-alert {
+  color: #c41f06;
+  border-color: #f95e47;
+  background: #fb9282;
 }
 
 button,
@@ -940,15 +1024,13 @@ legend {
 .custom-inputs.select {
   min-width: 10%;
 }
-.custom-inputs.select:after {
-  content: "▾";
-  width: 1.25rem;
+.custom-inputs.select .ico {
+  width: 1.5625rem;
   height: 100%;
   top: 0;
   right: 0;
   position: absolute;
-  line-height: 1.6;
-  font-size: 1.25rem;
+  line-height: 2.3;
   color: #cccccc;
   text-align: center;
   pointer-events: none;
@@ -969,7 +1051,6 @@ input[type="radio"] {
   top: 3px;
   left: 2px;
   margin: 0;
-  z-index: 3;
   visibility: hidden;
   position: absolute;
 }
@@ -990,7 +1071,6 @@ input[type="checkbox"] + label .check,
 input[type="radio"] + label .check {
   width: 1rem;
   height: 1rem;
-  z-index: 2;
   display: inline-block;
   vertical-align: middle;
   border: 1px solid #d9d9d9;
@@ -998,7 +1078,8 @@ input[type="radio"] + label .check {
   margin: 0 0.125rem 0 0;
   background: #fff;
 }
-input[type="checkbox"] + label .check:after,
+input[type="checkbox"] + label .check .ico, input[type="checkbox"] + label .check:after,
+input[type="radio"] + label .check .ico,
 input[type="radio"] + label .check:after {
   opacity: 0;
   position: absolute;
@@ -1014,7 +1095,8 @@ input[type="checkbox"]:checked + label .check,
 input[type="radio"]:checked + label .check {
   background: #f2f2f2;
 }
-input[type="checkbox"]:checked + label .check:after,
+input[type="checkbox"]:checked + label .check .ico, input[type="checkbox"]:checked + label .check:after,
+input[type="radio"]:checked + label .check .ico,
 input[type="radio"]:checked + label .check:after {
   opacity: 1;
 }
@@ -1030,12 +1112,10 @@ input[type="radio"]:disabled + label .check {
   border-color: #999999;
 }
 
-input[type="checkbox"] + label .check:after {
-  content: "✓";
-  top: 1px;
+input[type="checkbox"] + label .check .ico {
+  top: 2px;
   left: 3px;
   color: #078fd8;
-  font-size: 0.875rem;
 }
 
 input[type="radio"] + label .check {
@@ -1052,9 +1132,31 @@ input[type="radio"] + label .check:after {
   background: #078fd8;
 }
 
+.toogle-menu.active {
+  border-radius: 3px 3px 0 0;
+}
+.toogle-menu.active .hamburger-icon {
+  background: transparent;
+}
+.toogle-menu.active .hamburger-icon:before, .toogle-menu.active .hamburger-icon:after {
+  top: 0;
+}
+.toogle-menu.active .hamburger-icon:before {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.toogle-menu.active .hamburger-icon:after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 .toogle-menu {
   display: block;
-  padding: 0.9375rem 1.5625rem;
+  padding: 0.75rem 1.5625rem;
   color: #fff;
   cursor: pointer;
   position: relative;
@@ -1068,50 +1170,60 @@ input[type="radio"] + label .check:after {
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.7);
 }
-.toogle-menu span {
-  margin: 0 0.9375rem 0 0;
-}
-.toogle-menu span:after {
-  content: "";
-  width: 16px;
-  right: 0.9375rem;
-  position: absolute;
-  box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
-}
 @media (min-width: 40.06rem) {
   .toogle-menu {
     display: none;
   }
 }
+.toogle-menu:hover {
+  color: #fff;
+}
+.toogle-menu .text {
+  margin: 0 1.5625rem 0 0;
+}
+.toogle-menu .hamburger-icon,
+.toogle-menu .hamburger-icon:before,
+.toogle-menu .hamburger-icon:after {
+  content: "";
+  width: 1.5625rem;
+  height: 3px;
+  top: 48%;
+  right: 0.9375rem;
+  position: absolute;
+  background: #fff;
+  border-radius: 1px;
+  -moz-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.toogle-menu .hamburger-icon:before {
+  right: 0;
+  top: -0.5rem;
+}
+.toogle-menu .hamburger-icon:after {
+  right: 0;
+  top: 0.5rem;
+}
 
 .drop-down-menu {
+  display: none;
   width: 100%;
   font-size: 0;
-  max-height: 0;
-  overflow: hidden;
   text-align: left;
   background: rgba(0, 0, 0, 0.85);
-  border-radius: 3px;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  border-radius: 0 0 3px 3px;
 }
 @media (min-width: 40.06rem) {
   .drop-down-menu {
     float: right;
+    display: block;
     max-height: 100%;
     overflow: visible;
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
   }
-}
-.drop-down-menu.expanded {
-  max-height: 1000px;
-  -moz-transition: all 1.4s ease;
-  -o-transition: all 1.4s ease;
-  -webkit-transition: all 1.4s ease;
-  transition: all 1.4s ease;
 }
 .drop-down-menu > li {
   display: block;
@@ -1125,6 +1237,9 @@ input[type="radio"] + label .check:after {
     border-bottom: none;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
   }
+}
+.drop-down-menu > li:last-child {
+  border-bottom: none;
 }
 .drop-down-menu > li:first-child {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -1150,15 +1265,28 @@ input[type="radio"] + label .check:after {
   color: #078fd8;
   background: #191818;
 }
-.drop-down-menu .has-drop-down > a:after {
-  content: "▾";
-  float: right;
-  font-size: 0.875rem;
-  margin: -0.0625rem -0.9375rem 0 0.625rem;
+.drop-down-menu .has-drop-down > a {
+  position: relative;
+}
+.drop-down-menu .has-drop-down > a .ico {
+  top: 50%;
+  right: 0.9375rem;
+  position: absolute;
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.7);
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 40.06rem) {
+  .drop-down-menu .has-drop-down > a .ico {
+    right: 0.3125rem;
+  }
 }
 
 .drop-down {
@@ -1168,12 +1296,17 @@ input[type="radio"] + label .check:after {
   margin: 1.875rem 0 0;
   visibility: hidden;
   position: absolute;
-  background: rgba(25, 24, 24, 0.85);
+  background: rgba(25, 24, 24, 0.9);
   border-radius: 3px;
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
+}
+@media (min-width: 40.06rem) {
+  .drop-down {
+    background: rgba(25, 24, 24, 0.85);
+  }
 }
 .drop-down:before {
   content: "";
@@ -1344,9 +1477,10 @@ input[type="radio"] + label .check:after {
 .header {
   width: 100%;
   height: 6.25rem;
-  text-align: center;
+  top: 0;
   z-index: 2;
   position: fixed;
+  text-align: center;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -1376,10 +1510,7 @@ input[type="radio"] + label .check:after {
 }
 
 .main {
-  top: 480px;
-  width: 100%;
-  z-index: 1;
-  position: absolute;
+  margin: 30rem 0 0;
   background: #fff;
 }
 
@@ -1387,12 +1518,12 @@ input[type="radio"] + label .check:after {
   padding: 1.5625rem 0;
   text-align: center;
 }
-.content h6 {
-  margin: 0 0 0.9375rem;
-}
 
 .grid-system {
   background: #def5ff;
+}
+.grid-system h6 {
+  margin: 0 0 0.9375rem;
 }
 @media (min-width: 40.06rem) {
   .grid-system .grid-features {
@@ -1527,6 +1658,20 @@ input[type="radio"] + label .check:after {
 }
 .city-selection > label {
   display: block;
+}
+
+.alerts-samples {
+  width: 100%;
+  font-size: 0;
+}
+
+.alert {
+  margin: 0 0 0.9375rem;
+}
+
+.footer {
+  padding: 3.125rem;
+  background: #191818;
 }
 
 .hero {

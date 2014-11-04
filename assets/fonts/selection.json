@@ -1,0 +1,141 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M865.66 257.287l-353.69 329.845-353.69-329.845c-24.4-22.762-68.462-15.184-98.421 16.881-29.93 32.154-34.348 76.595-9.977 99.474l400.238 373.204c1.053 1.2 1.521 2.867 2.779 4.067 3.131 3.306 6.934 5.383 10.299 8.163l9.538 8.836c8.192 7.724 18.988 10.767 30.398 11.615 2.838 0.527 5.5 0 8.338 0.234 3.218-0.117 6.173 0.351 9.479-0.234 11.381-1.024 21.943-4.067 30.223-11.615l9.070-8.485c3.482-2.867 7.49-4.944 10.913-8.426 1.141-1.287 1.726-3.013 2.896-4.272l400.091-373.146c24.4-22.791 19.953-67.174-10.064-99.387-29.901-32.095-74.021-39.673-98.421-16.911z"
+				],
+				"attrs": [
+					{
+						"opacity": 1,
+						"visibility": false
+					}
+				],
+				"grid": 0,
+				"tags": [
+					"arrow-down"
+				]
+			},
+			"attrs": [
+				{
+					"opacity": 1,
+					"visibility": false
+				}
+			],
+			"properties": {
+				"order": 1,
+				"id": 2,
+				"prevSize": 32,
+				"code": 58880,
+				"name": "arrow-down"
+			},
+			"setIdx": 0,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M964.052 749.802c29.989-32.212 34.465-76.595 10.064-99.387l-400.091-373.146c-1.17-1.258-1.755-2.984-2.896-4.272-3.423-3.482-7.431-5.559-10.913-8.426l-9.070-8.485c-8.251-7.578-18.842-10.591-30.223-11.615-3.306-0.585-6.261-0.117-9.479-0.234-2.838 0.234-5.5-0.293-8.338 0.234-11.41 0.848-22.206 3.92-30.398 11.615l-9.538 8.836c-3.365 2.809-7.168 4.857-10.299 8.163-1.258 1.2-1.726 2.867-2.779 4.067l-400.208 373.204c-24.371 22.908-19.953 67.35 9.977 99.474 29.959 32.066 74.021 39.643 98.421 16.881l353.69-329.845 353.69 329.845c24.4 22.762 68.52 15.184 98.392-16.911z"
+				],
+				"attrs": [
+					{
+						"opacity": 1,
+						"visibility": false
+					}
+				],
+				"grid": 0,
+				"tags": [
+					"arrow-up"
+				]
+			},
+			"attrs": [
+				{
+					"opacity": 1,
+					"visibility": false
+				}
+			],
+			"properties": {
+				"order": 2,
+				"id": 1,
+				"prevSize": 32,
+				"code": 58881,
+				"name": "arrow-up"
+			},
+			"setIdx": 0,
+			"iconIdx": 1
+		},
+		{
+			"icon": {
+				"paths": [
+					"M404.977 883.946c-6.875 0-6.875 6.846-13.78 6.846s-6.905 0-13.809-6.846l-338.3-338.3c-6.875-6.905-6.875-20.714 0-27.619l138.064-138.064c6.905-6.934 20.714-6.934 27.619 0l186.397 186.397 428.032-428.003c6.905-6.905 20.714-6.905 27.619 0l138.035 138.064c6.934 6.875 6.934 20.714 0 27.589l-579.877 579.935z"
+				],
+				"attrs": [
+					{
+						"opacity": 1,
+						"visibility": false
+					}
+				],
+				"grid": 0,
+				"tags": [
+					"checkmark"
+				]
+			},
+			"attrs": [
+				{
+					"opacity": 1,
+					"visibility": false
+				}
+			],
+			"properties": {
+				"order": 3,
+				"id": 0,
+				"prevSize": 32,
+				"code": 58882,
+				"name": "checkmark"
+			},
+			"setIdx": 0,
+			"iconIdx": 2
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "UIToolKity"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "ico-",
+			"metadata": {
+				"fontFamily": "UIToolKity",
+				"majorVersion": 1,
+				"minorVersion": 0
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"autoHost": false,
+			"showSelector": false,
+			"selector": "class",
+			"classSelector": ".ico",
+			"showMetrics": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"search": "",
+		"quickUsageToken": {
+			"UntitledProject1": "OGM3ZTQzNmNhOWFmZjg1NGI1MmUyODYxYmRmNDQ2ZDgjMSMxNDE1MDkzNjAxIyMj"
+		},
+		"gridSize": 16
+	}
+}

@@ -6,9 +6,10 @@
 .header {
     width: 100%;
     height: rem-calc(100);
-    text-align: center;
+    top: 0;
     z-index: 2;
     position: fixed;
+    text-align: center;
     @include transition(all .5s ease);
 
     &.sticky {
