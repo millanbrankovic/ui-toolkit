@@ -13,7 +13,7 @@ There's no any specific need to install anything since UIToolKity is a static pr
 #### Grid
 Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create own rows and columns with semantic markup, like so:
 
-##### HTML
+* ##### HTML
 ```html
 <div class="custom-row-class-name">
     <div class="custom-column-class-name">
