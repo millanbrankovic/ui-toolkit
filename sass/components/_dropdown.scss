@@ -162,7 +162,7 @@
     .has-drop-down {
         display: none;
 
-        @include screen($large) {
+        @include screen($medium) {
             display: inline-block;
         }
 

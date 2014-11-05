@@ -1291,7 +1291,7 @@ input[type="radio"] + label .check:after {
 .drop-down-menu .has-drop-down {
   display: none;
 }
-@media (min-width: 64.06rem) {
+@media (min-width: 40.06rem) {
   .drop-down-menu .has-drop-down {
     display: inline-block;
   }
