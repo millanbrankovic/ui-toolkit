@@ -160,6 +160,11 @@ input[type="radio"] {
             display: inline-block;
             vertical-align: middle;
         }
+
+        &:focus,
+        &:active {
+            background: transparent;
+        }
     }
 
     &:checked {

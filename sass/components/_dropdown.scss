@@ -132,7 +132,8 @@
             border-right: 1px solid rgba($light-color, .2);
         }
 
-        &:last-child {
+        &:last-child,
+        &:nth-last-child(2) {
             border-bottom: none;
         }
 
@@ -159,6 +160,12 @@
     }
 
     .has-drop-down {
+        display: none;
+
+        @include screen($large) {
+            display: inline-block;
+        }
+
         > a {
             position: relative;
             padding-right: rem-calc(40);

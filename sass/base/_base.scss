@@ -38,3 +38,9 @@ a {
         color: darken($brand-primary, 10%);
     }
 }
+
+b, strong {
+    font-weight: 400;
+    font-family: $base-font-strong;
+}
+
