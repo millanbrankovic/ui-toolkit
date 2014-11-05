@@ -4,6 +4,26 @@
 
 
 .footer {
-    padding: rem-calc(50);
+    padding: rem-calc(30 0);
     background: $dark-color;
+    text-align: center;
+
+    ul {
+        color: $light-color;
+        font-size: rem-calc(12);
+        @extend %reset-list;
+
+        li {
+            margin: rem-calc(5 0);
+        }
+
+        a {
+            margin: rem-calc(0 2);
+        }
+
+        span {
+            color: #f64989;
+            font-size: rem-calc(18);
+        }
+    }
 }

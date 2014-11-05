@@ -13,7 +13,7 @@
     @include transition(all .5s ease);
 
     &.sticky {
-        height: 70px;
+        height: rem-calc(70);
         background: $dark-color;
     }
 

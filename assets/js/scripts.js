@@ -3,7 +3,7 @@
 (function () {
     $(".toogle-menu").on('click', function() {
         $(this).toggleClass("active");
-        $(".drop-down-menu").slideToggle(200);
+        $(".main-nav").toggleClass("expanded");
     });
 
     $(window).on('scroll touchmove', function () {

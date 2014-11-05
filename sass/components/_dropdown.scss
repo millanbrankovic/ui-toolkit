@@ -85,14 +85,23 @@
 // Drop Down Menu
 // --------------------------------------------------
 
+.expanded {
+    .drop-down-menu {
+        max-height: 1000px;
+        @include transition(all 1.4s ease);
+    }
+}
+
 .drop-down-menu {
     @extend %reset-list;
-    display: none;
     width: 100%;
     font-size: 0;
+    max-height: 0;
+    overflow: hidden;
     text-align: left;
     background: rgba(#000, .85);
-    border-radius: 0 0 $global-radius $global-radius;
+    border-radius: $global-radius;
+    @include transition(all .5s ease);
 
     @include screen($medium) {
         float: right;
@@ -179,7 +188,7 @@
     margin: rem-calc(30 0 0);
     visibility: hidden;
     position: absolute;
-    background: rgba($dark-color, .9);
+    background: rgba(#000, .9);
     border-radius: $global-radius;
     @include transition(all .15s ease);
 
@@ -212,9 +221,13 @@
                     position: absolute;
                     border-left: 8px solid transparent;
                     border-right: 8px solid transparent;
-                    border-bottom: 8px solid rgba($dark-color, .8);
+                    border-bottom: 8px solid rgba(#000, .9);
                     @include transition(all .3s ease);
                     @include transform(translateX(-50%));
+
+                    @include screen($medium) {
+                        border-bottom: 8px solid rgba($dark-color, .8);
+                    }
                 }
 
                 &:hover {

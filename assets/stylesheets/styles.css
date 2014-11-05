@@ -340,7 +340,7 @@ table {
 }
 
 .drop-down-menu, .drop-down, .grid-images ul, .buttons ul, .form-example ul,
-.custom-form-example ul {
+.custom-form-example ul, .footer ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1206,13 +1206,26 @@ input[type="radio"] + label .check:after {
   top: 0.5rem;
 }
 
+.expanded .drop-down-menu {
+  max-height: 1000px;
+  -moz-transition: all 1.4s ease;
+  -o-transition: all 1.4s ease;
+  -webkit-transition: all 1.4s ease;
+  transition: all 1.4s ease;
+}
+
 .drop-down-menu {
-  display: none;
   width: 100%;
   font-size: 0;
+  max-height: 0;
+  overflow: hidden;
   text-align: left;
   background: rgba(0, 0, 0, 0.85);
-  border-radius: 0 0 3px 3px;
+  border-radius: 3px;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 @media (min-width: 40.06rem) {
   .drop-down-menu {
@@ -1296,7 +1309,7 @@ input[type="radio"] + label .check:after {
   margin: 1.875rem 0 0;
   visibility: hidden;
   position: absolute;
-  background: rgba(25, 24, 24, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 3px;
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
@@ -1331,7 +1344,7 @@ input[type="radio"] + label .check:after {
   position: absolute;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid rgba(25, 24, 24, 0.8);
+  border-bottom: 8px solid rgba(0, 0, 0, 0.9);
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -1340,6 +1353,11 @@ input[type="radio"] + label .check:after {
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+@media (min-width: 40.06rem) {
+  .drop-down li:first-child a:before {
+    border-bottom: 8px solid rgba(25, 24, 24, 0.8);
+  }
 }
 .drop-down li:first-child a:hover:before {
   border-left: 8px solid transparent;
@@ -1487,7 +1505,7 @@ input[type="radio"] + label .check:after {
   transition: all 0.5s ease;
 }
 .header.sticky {
-  height: 70px;
+  height: 4.375rem;
   background: #191818;
 }
 .header h1 {
@@ -1670,8 +1688,23 @@ input[type="radio"] + label .check:after {
 }
 
 .footer {
-  padding: 3.125rem;
+  padding: 1.875rem 0;
   background: #191818;
+  text-align: center;
+}
+.footer ul {
+  color: #fff;
+  font-size: 0.75rem;
+}
+.footer ul li {
+  margin: 0.3125rem 0;
+}
+.footer ul a {
+  margin: 0 0.125rem;
+}
+.footer ul span {
+  color: #f64989;
+  font-size: 1.125rem;
 }
 
 .hero {
