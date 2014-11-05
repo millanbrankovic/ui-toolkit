@@ -83,6 +83,15 @@ $icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
 }
 
 
+// User Select
+// --------------------------------------------------
+
+@mixin user-select($value: none) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
+}
+
+
 // Vertical Aligment
 // --------------------------------------------------
 

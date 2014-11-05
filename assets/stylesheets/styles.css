@@ -334,6 +334,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'open_sansregular';
   src: url("../../assets/fonts/opensans-regular-webfont.eot");
@@ -341,6 +342,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'open_sansbold';
   src: url("../../assets/fonts/opensans-bold-webfont.eot");
@@ -348,6 +350,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+
 h1 {
   font-size: 2.5rem;
 }
@@ -453,7 +456,7 @@ p {
 }
 
 body, html {
-  color: #222;
+  color: #222222;
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
 }
