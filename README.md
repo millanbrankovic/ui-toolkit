@@ -23,7 +23,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 ```
 
 ##### SCSS
-```html
+```scss
 .custom-row-class-name {
     @extend %row;
     @include row();
