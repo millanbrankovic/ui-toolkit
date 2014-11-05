@@ -18,7 +18,7 @@ A collection of small, responsive SCSS modular-based elements for use on any web
 #### Grid
 Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create rows and columns with semantic markup, like so:
 
-**HTML**
+###### html
 ```html
 <div class="custom-row-class-name">
     <div class="custom-column-class-name">
@@ -27,7 +27,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 </div>
 ```
 
-**SCSS**
+###### scss
 ```scss
 .custom-row-class-name {
     @extend %row;
@@ -72,8 +72,9 @@ And Media Query Mixin is:
 }
 ```
 
-###### Usage
+**Usage**
 
+###### scss
 ```scss
 .custom-column-class-name {
     @extend %col;
@@ -101,15 +102,15 @@ And Media Query Mixin is:
 Use the `%btn` placeholder and the `btn()` mixin to create buttons with semantic markup.
 Some basic variables are already defined.
 
-###### Usage example
+**Usage example**
 
-**HTML**
+###### html
 ```html
 <button type="button" value="Button Submit"></button>
 <input type="submit" value="Input Submit">
 ```
 
-**SCSS**
+###### scss
 ```scss
 button {
     @extend %btn;
