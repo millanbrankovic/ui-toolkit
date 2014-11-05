@@ -6,8 +6,13 @@
 // Drop Down Toogle
 // --------------------------------------------------
 
-.toogle-menu {
-    &.active {
+.expand {
+    .drop-down-menu {
+        max-height: 1000px;
+        @include transition(all 1.4s ease);
+    }
+
+    .toogle-menu {
         border-radius: $global-radius $global-radius 0 0;
 
         .hamburger-icon {
@@ -28,6 +33,15 @@
         }
     }
 }
+
+.open {
+    .drop-down {
+        margin: rem-calc(10 0 0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 
 .toogle-menu {
     display: block;
@@ -85,13 +99,6 @@
 // Drop Down Menu
 // --------------------------------------------------
 
-.expanded {
-    .drop-down-menu {
-        max-height: 1000px;
-        @include transition(all 1.4s ease);
-    }
-}
-
 .drop-down-menu {
     @extend %reset-list;
     width: 100%;
@@ -100,7 +107,7 @@
     overflow: hidden;
     text-align: left;
     background: rgba(#000, .85);
-    border-radius: $global-radius;
+    border-radius: 0 0 $global-radius $global-radius;
     @include transition(all .5s ease);
 
     @include screen($medium) {
@@ -138,14 +145,6 @@
             }
         }
 
-        &:hover {
-            > .drop-down {
-                margin: rem-calc(10 0 0);
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-
         > a {
             display: block;
             color: rgba($light-color, .7);
@@ -162,18 +161,26 @@
     .has-drop-down {
         > a {
             position: relative;
+            padding-right: rem-calc(40);
 
             .ico {
-                top: 50%;
+                top: rem-calc(17);
                 right: rem-calc(15);
                 position: absolute;
                 font-size: rem-calc(11);
                 color: rgba($light-color, .7);
                 @include transition(all .15s ease);
-                @include transform(translateY(-50%));
 
                 @include screen($medium) {
-                    right: rem-calc(5);
+                    right: rem-calc(15);
+                }
+            }
+        }
+
+        &.open {
+            > a {
+                .ico {
+                    @include transform(rotate(-180deg));
                 }
             }
         }
@@ -247,28 +254,6 @@
                 border-radius: 0 0 $global-radius $global-radius;
             }
         }
-
-        &.has-drop-down {
-            position: relative;
-
-            > a {
-                &:after {
-                    content: "»";
-                    float: right;
-                    font-size: rem-calc(18);
-                    margin: rem-calc(-2 0 0);
-                    @include transition(all .15s ease);
-                }
-            }
-        }
-
-        &:hover {
-            > .drop-down {
-                margin: 0;
-                opacity: 1;
-                visibility: visible;
-            }
-        }
     }
 
     a {
@@ -280,25 +265,6 @@
         &:hover {
             color: $light-color;
             background: $brand-primary;
-        }
-    }
-
-    .drop-down {
-        width: 100%;
-        top: 0;
-        left: -100%;
-        opacity: 0;
-        margin: rem-calc(20 0 0);
-        visibility: hidden;
-
-        > li {
-            &:first-child {
-                a {
-                    &:before {
-                        display: none;
-                    }
-                }
-            }
         }
     }
 }

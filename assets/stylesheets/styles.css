@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 /*! normalize.css v1.1.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
@@ -1133,28 +1132,41 @@ input[type="radio"] + label .check:after {
   background: #078fd8;
 }
 
-.toogle-menu.active {
+.expand .drop-down-menu {
+  max-height: 1000px;
+  -webkit-transition: all 1.4s ease;
+  -moz-transition: all 1.4s ease;
+  -o-transition: all 1.4s ease;
+  transition: all 1.4s ease;
+}
+.expand .toogle-menu {
   border-radius: 3px 3px 0 0;
 }
-.toogle-menu.active .hamburger-icon {
+.expand .toogle-menu .hamburger-icon {
   background: transparent;
 }
-.toogle-menu.active .hamburger-icon:before, .toogle-menu.active .hamburger-icon:after {
+.expand .toogle-menu .hamburger-icon:before, .expand .toogle-menu .hamburger-icon:after {
   top: 0;
 }
-.toogle-menu.active .hamburger-icon:before {
+.expand .toogle-menu .hamburger-icon:before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.toogle-menu.active .hamburger-icon:after {
+.expand .toogle-menu .hamburger-icon:after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.open .drop-down {
+  margin: 0.625rem 0 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .toogle-menu {
@@ -1207,14 +1219,6 @@ input[type="radio"] + label .check:after {
   top: 0.5rem;
 }
 
-.expanded .drop-down-menu {
-  max-height: 1000px;
-  -webkit-transition: all 1.4s ease;
-  -moz-transition: all 1.4s ease;
-  -o-transition: all 1.4s ease;
-  transition: all 1.4s ease;
-}
-
 .drop-down-menu {
   width: 100%;
   font-size: 0;
@@ -1222,7 +1226,7 @@ input[type="radio"] + label .check:after {
   overflow: hidden;
   text-align: left;
   background: rgba(0, 0, 0, 0.85);
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1264,11 +1268,6 @@ input[type="radio"] + label .check:after {
     border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
-.drop-down-menu > li:hover > .drop-down {
-  margin: 0.625rem 0 0;
-  opacity: 1;
-  visibility: visible;
-}
 .drop-down-menu > li > a {
   display: block;
   color: rgba(255, 255, 255, 0.7);
@@ -1281,9 +1280,10 @@ input[type="radio"] + label .check:after {
 }
 .drop-down-menu .has-drop-down > a {
   position: relative;
+  padding-right: 2.5rem;
 }
 .drop-down-menu .has-drop-down > a .ico {
-  top: 50%;
+  top: 1.0625rem;
   right: 0.9375rem;
   position: absolute;
   font-size: 0.6875rem;
@@ -1292,16 +1292,18 @@ input[type="radio"] + label .check:after {
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 @media (min-width: 40.06rem) {
   .drop-down-menu .has-drop-down > a .ico {
-    right: 0.3125rem;
+    right: 0.9375rem;
   }
+}
+.drop-down-menu .has-drop-down.open > a .ico {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .drop-down {
@@ -1373,24 +1375,6 @@ input[type="radio"] + label .check:after {
 .drop-down li:last-child a {
   border-radius: 0 0 3px 3px;
 }
-.drop-down li.has-drop-down {
-  position: relative;
-}
-.drop-down li.has-drop-down > a:after {
-  content: "»";
-  float: right;
-  font-size: 1.125rem;
-  margin: -0.125rem 0 0;
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-}
-.drop-down li:hover > .drop-down {
-  margin: 0;
-  opacity: 1;
-  visibility: visible;
-}
 .drop-down a {
   display: block;
   position: relative;
@@ -1400,17 +1384,6 @@ input[type="radio"] + label .check:after {
 .drop-down a:hover {
   color: white;
   background: #078fd8;
-}
-.drop-down .drop-down {
-  width: 100%;
-  top: 0;
-  left: -100%;
-  opacity: 0;
-  margin: 1.25rem 0 0;
-  visibility: hidden;
-}
-.drop-down .drop-down > li:first-child a:before {
-  display: none;
 }
 
 .inner-content {
