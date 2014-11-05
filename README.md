@@ -42,7 +42,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 
 
 #### Media Queries
-Media Queries are defined through variables and mixins. It's also possible to target a specific orientation. 
+Media Queries are defined through variables and mixins. It's also possible to target a specific orientation.
 
 Basic variables are:
 
@@ -94,5 +94,30 @@ And Media Query Mixin is:
         @include col(2);
         background: yellow;
     }
+}
+```
+
+#### Buttons
+Use the `%btn` placeholder and the `btn()` mixin to create buttons with semantic markup.
+Some basic variables are already defined.
+
+###### Usage example
+
+###### HTML
+```html
+<button type="button" value="Button Submit"></button>
+<input type="submit" value="Input Submit">
+```
+
+###### SCSS
+```scss
+button {
+    @extend %btn;
+    @include btn($btn-padding: $btn-med, $btn-font-size: $btn-med-font-size, $btn-bg: $brand-primary);
+}
+
+input[type="submit"] {
+    @extend %btn;
+    @include btn($btn-padding: $btn-med, $btn-font-size: $btn-med-font-size, $btn-bg: $btn-default-color);
 }
 ```
