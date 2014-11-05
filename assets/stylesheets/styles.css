@@ -365,7 +365,7 @@ table {
 .grid-content {
   padding: 0.9375rem;
   margin: 0 0 0.9375rem;
-  background: #fff;
+  background: white;
   border-radius: 3px;
 }
 .grid-content:after {
@@ -386,6 +386,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'open_sansregular';
   src: url("../../assets/fonts/opensans-regular-webfont.eot");
@@ -393,6 +394,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'open_sansbold';
   src: url("../../assets/fonts/opensans-bold-webfont.eot");
@@ -400,6 +402,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: #444;
   line-height: 1.4;
@@ -511,6 +514,7 @@ p {
   font-weight: normal;
   font-style: normal;
 }
+
 .ico {
   font-family: 'UIToolKity';
   font-size: 1rem;
@@ -545,7 +549,7 @@ p {
 }
 
 body, html {
-  color: #222;
+  color: #222222;
   line-height: 1.6;
   font-size: 1rem;
   font-family: "open_sansregular";
@@ -627,10 +631,8 @@ input[type="submit"] {
   line-height: 1;
   border-radius: 3px;
   transition: all .35s ease;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
 }
 @media (min-width: 64.06rem) {
   button,
@@ -669,7 +671,7 @@ input[type="submit"]:disabled {
 .default-button {
   padding: 0.75rem 0.875rem;
   font-size: 1rem;
-  background: #fff;
+  background: white;
   color: rgba(0, 0, 0, 0.6);
   border: 1px solid #e8e8e8;
 }
@@ -692,7 +694,7 @@ input[type="submit"]:disabled {
   padding: 0.75rem 0.875rem;
   font-size: 1rem;
   background: #078fd8;
-  color: #fff;
+  color: white;
   border: 1px solid #0672ac;
 }
 .brand-button:hover {
@@ -736,7 +738,7 @@ input[type="submit"]:disabled {
   padding: 0.75rem 0.875rem;
   font-size: 1rem;
   background: #97df8b;
-  color: #fff;
+  color: white;
   border: 1px solid #77d567;
 }
 .success-button:hover {
@@ -758,7 +760,7 @@ input[type="submit"]:disabled {
   padding: 0.75rem 0.875rem;
   font-size: 1rem;
   background: #fece89;
-  color: #fff;
+  color: white;
   border: 1px solid #febb5b;
 }
 .warning-button:hover {
@@ -780,7 +782,7 @@ input[type="submit"]:disabled {
   padding: 0.75rem 0.875rem;
   font-size: 1rem;
   background: #fb9282;
-  color: #fff;
+  color: white;
   border: 1px solid #fa6b56;
 }
 .error-button:hover {
@@ -907,12 +909,13 @@ select {
   padding: 0.5rem 0.625rem;
   color: rgba(0, 0, 0, 0.75);
   font-size: 0.875rem;
-  background: none #fff;
+  background: none white;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   transition: all .35s ease;
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1034,7 +1037,7 @@ legend {
   color: #cccccc;
   text-align: center;
   pointer-events: none;
-  background: #fff;
+  background: white;
   border-top: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -1042,7 +1045,7 @@ legend {
 }
 .custom-inputs.select select:focus {
   box-shadow: none;
-  background: #fff;
+  background: white;
   border-color: #cccccc;
 }
 
@@ -1058,10 +1061,8 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   cursor: pointer;
   position: relative;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
 }
 input[type="checkbox"] + label *,
 input[type="radio"] + label * {
@@ -1076,7 +1077,7 @@ input[type="radio"] + label .check {
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   margin: 0 0.125rem 0 0;
-  background: #fff;
+  background: white;
 }
 input[type="checkbox"] + label .check .ico, input[type="checkbox"] + label .check:after,
 input[type="radio"] + label .check .ico,
@@ -1142,31 +1143,31 @@ input[type="radio"] + label .check:after {
   top: 0;
 }
 .toogle-menu.active .hamburger-icon:before {
+  -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .toogle-menu.active .hamburger-icon:after {
+  -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .toogle-menu {
   display: block;
   padding: 0.75rem 1.5625rem;
-  color: #fff;
+  color: white;
   cursor: pointer;
   position: relative;
   font-size: 0.8125rem;
   text-align: right;
   text-transform: uppercase;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.7);
 }
@@ -1176,7 +1177,7 @@ input[type="radio"] + label .check:after {
   }
 }
 .toogle-menu:hover {
-  color: #fff;
+  color: white;
 }
 .toogle-menu .text {
   margin: 0 1.5625rem 0 0;
@@ -1190,11 +1191,11 @@ input[type="radio"] + label .check:after {
   top: 48%;
   right: 0.9375rem;
   position: absolute;
-  background: #fff;
+  background: white;
   border-radius: 1px;
+  -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
-  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .toogle-menu .hamburger-icon:before {
@@ -1208,9 +1209,9 @@ input[type="radio"] + label .check:after {
 
 .expanded .drop-down-menu {
   max-height: 1000px;
+  -webkit-transition: all 1.4s ease;
   -moz-transition: all 1.4s ease;
   -o-transition: all 1.4s ease;
-  -webkit-transition: all 1.4s ease;
   transition: all 1.4s ease;
 }
 
@@ -1222,9 +1223,9 @@ input[type="radio"] + label .check:after {
   text-align: left;
   background: rgba(0, 0, 0, 0.85);
   border-radius: 3px;
+  -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 @media (min-width: 40.06rem) {
@@ -1287,13 +1288,14 @@ input[type="radio"] + label .check:after {
   position: absolute;
   font-size: 0.6875rem;
   color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
-  -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
+  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media (min-width: 40.06rem) {
@@ -1311,9 +1313,9 @@ input[type="radio"] + label .check:after {
   position: absolute;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 3px;
+  -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
-  -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 @media (min-width: 40.06rem) {
@@ -1345,13 +1347,14 @@ input[type="radio"] + label .check:after {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 @media (min-width: 40.06rem) {
@@ -1378,9 +1381,9 @@ input[type="radio"] + label .check:after {
   float: right;
   font-size: 1.125rem;
   margin: -0.125rem 0 0;
+  -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
-  -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .drop-down li:hover > .drop-down {
@@ -1395,7 +1398,7 @@ input[type="radio"] + label .check:after {
   color: rgba(255, 255, 255, 0.7);
 }
 .drop-down a:hover {
-  color: #fff;
+  color: white;
   background: #078fd8;
 }
 .drop-down .drop-down {
@@ -1415,7 +1418,7 @@ input[type="radio"] + label .check:after {
 }
 
 .sticky h1 {
-  color: #fff;
+  color: white;
   font-size: 1.5rem;
 }
 @media (min-width: 40.06rem) {
@@ -1474,9 +1477,10 @@ input[type="radio"] + label .check:after {
   bottom: 0;
   position: absolute;
   background: #d9d9d9;
+  -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 @media (min-width: 40.06rem) {
@@ -1499,9 +1503,9 @@ input[type="radio"] + label .check:after {
   z-index: 2;
   position: fixed;
   text-align: center;
+  -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .header.sticky {
@@ -1512,24 +1516,24 @@ input[type="radio"] + label .check:after {
   margin: 0;
   font-weight: 100;
   font-family: "open_sanslight";
+  -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .header .main-nav {
   width: 100%;
   top: 0.5rem;
   position: relative;
+  -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 .main {
   margin: 30rem 0 0;
-  background: #fff;
+  background: white;
 }
 
 .content {
@@ -1581,13 +1585,13 @@ input[type="radio"] + label .check:after {
 .grid-images img {
   border-radius: 3px;
   border: 1px solid transparent;
+  -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
-  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .grid-images img:hover {
-  border: 1px solid #fff;
+  border: 1px solid white;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
@@ -1693,7 +1697,7 @@ input[type="radio"] + label .check:after {
   text-align: center;
 }
 .footer ul {
-  color: #fff;
+  color: white;
   font-size: 0.75rem;
 }
 .footer ul li {
@@ -1727,14 +1731,14 @@ input[type="radio"] + label .check:after {
 }
 .hero h2 {
   width: 100%;
-  color: #fff;
+  color: white;
   font-weight: 400;
   font-family: "open_sansbold";
 }
 .hero h2 span {
   display: inline-block;
   margin: 1.875rem 0 0;
-  color: #fff;
+  color: white;
   font-size: 1.375rem;
   font-family: "open_sanslight";
 }
