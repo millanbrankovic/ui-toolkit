@@ -78,7 +78,6 @@ And Media Query Mixin is:
 ```scss
 .custom-column-class-name {
     @extend %col;
-    @include col(12);
     background: blue;
 
     @include screen($medium) {
@@ -99,7 +98,7 @@ And Media Query Mixin is:
 ```
 
 #### Buttons
-`%btn` placeholder and `btn()` mixin is used to create buttons with the semantic markup.
+`%btn` placeholder and `btn()` mixin are used to create buttons with the semantic markup.
 
 Some basic variables are already defined.
 
