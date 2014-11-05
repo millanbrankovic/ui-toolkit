@@ -11,7 +11,7 @@ UIToolKity includes some of the <a href="https://github.com/millanbrankovic/UITo
 There's no any specific need to install anything since UIToolKity is a static project. The only requirement is to have Sass & Compass already installed on machine.
 
 #### Grid
-Use the row() and col() mixins and %row and %col placeholders to create own rows and columns with semantic markup, like so:
+Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create own rows and columns with semantic markup, like so:
 
 ##### HTML
 ```html
@@ -23,7 +23,7 @@ Use the row() and col() mixins and %row and %col placeholders to create own rows
 ```
 
 ##### SCSS
-```css
+```html
 .custom-row-class-name {
     @extend %row;
     @include row();
