@@ -10,7 +10,7 @@ A collection of small, responsive SCSS modular-based elements for use on any web
 **UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, then some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
 
 
-## How to use
+### How to use
 
 **UIToolKity** is a static project so in order to use it the only requirement is to have Sass & Compass already installed on machine.
 
@@ -18,7 +18,7 @@ A collection of small, responsive SCSS modular-based elements for use on any web
 #### Grid
 Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create rows and columns with semantic markup, like so:
 
-##### HTML
+###### HTML
 ```html
 <div class="custom-row-class-name">
     <div class="custom-column-class-name">
@@ -27,7 +27,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 </div>
 ```
 
-##### SCSS
+###### SCSS
 ```scss
 .custom-row-class-name {
     @extend %row;
@@ -42,7 +42,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 
 
 #### Media Queries
-Media Queries are defined through variables and mixins. It's also possible to target specific orientation. 
+Media Queries are defined through variables and mixins. It's also possible to target a specific orientation. 
 
 Basic variables are:
 
@@ -56,7 +56,7 @@ $portrait: "orientation: portrait" !default;
 $landscape: "orientation: landscape" !default;
 ```
 
-And Media Querie Mixin is:
+And Media Query Mixin is:
 
 ```scss
 @mixin screen($breakpoint, $orientation: false) {
