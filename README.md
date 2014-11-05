@@ -4,15 +4,15 @@
 ## A Little Responsive UI ToolKit for starting a new project
 
 
-A collection of small, responsive SCSS modular-based elements for use on any web project. It's a mobile first and Sass & Compass based UI ToolKit, semantically oriented - no classes such as `.row`, `.col`, `.columns`, `.large-4` or `.sm-4` etc.
+My collection of small, responsive SCSS modular-based elements for use on any web project. It's a mobile first and Sass & Compass based UI ToolKit, semantically oriented - no classes such as `.row`, `.col`, `.columns`, `.large-4` or `.sm-4` etc.
 
 
-**UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, then some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
+**UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
 
 
 ### How to use
 
-**UIToolKity** is a static project so in order to use it the only requirement is to have Sass & Compass already installed on machine.
+**UIToolKity** is a static project so the only requirement for using it is to have [Sass](http://sass-lang.com) & [Compass](http://compass-style.org) already installed on machine.
 
 
 #### Grid
