@@ -56,3 +56,19 @@ $xxlarge: "min-width: 120.1rem"; // 1921px
 $portrait: "orientation: portrait" !default;
 $landscape: "orientation: landscape" !default;
 ```
+
+And Media Queries Mixin is:
+
+```scss
+@mixin screen($breakpoint, $orientation: false) {
+    @if $orientation != false {
+        @media (#{$breakpoint}) and (#{$orientation}) {
+            @content;
+        }
+    } @else {
+        @media ($breakpoint) {
+            @content;
+        }
+    }
+}
+```
