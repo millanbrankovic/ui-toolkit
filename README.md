@@ -131,7 +131,7 @@ input[type="submit"] {
 ###### html
 ```html
 <div data-alert class="custom-success-box">
-    <!-- Your content goes here -->
+    <!-- Success message goes here -->
     <span class="close">&times;</span>
 </div>
 ```
