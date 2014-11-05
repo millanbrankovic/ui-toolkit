@@ -122,3 +122,23 @@ input[type="submit"] {
     @include btn($btn-padding: $btn-med, $btn-font-size: $btn-med-font-size, $btn-bg: $btn-default-color);
 }
 ```
+
+#### Alerts
+`%alert` placeholder is used to extend any element in order to create alert message box and can be found [here](https://github.com/millanbrankovic/UIToolKit/blob/master/sass/components/_alerts.scss)
+
+**Basic usage**
+
+###### html
+```html
+<div data-alert class="custom-success-box">
+    <!-- Your content goes here -->
+    <span class="close">&times;</span>
+</div>
+```
+
+###### scss
+```scss
+.custom-success-box {
+    @extend %alert-success;
+}
+```
