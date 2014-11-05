@@ -16,7 +16,7 @@ A collection of small, responsive SCSS modular-based elements for use on any web
 
 
 #### Grid
-Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create rows and columns with semantic markup, like so:
+`%row` and `%col` placeholders, and `row()` and `col()` mixins are here to create rows and columns with semantic markup, like so:
 
 ###### html
 ```html
@@ -44,7 +44,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 #### Media Queries
 Media Queries are defined through variables and mixins. It's also possible to target a specific orientation.
 
-Basic variables are:
+Basic Media Query variables are:
 
 ```scss
 $small: "max-width: 40rem"; // 640px
@@ -99,7 +99,8 @@ And Media Query Mixin is:
 ```
 
 #### Buttons
-Use the `%btn` placeholder and the `btn()` mixin to create buttons with semantic markup.
+`%btn` placeholder and `btn()` mixin is used to create buttons with the semantic markup.
+
 Some basic variables are already defined.
 
 **Usage example**
@@ -140,5 +141,29 @@ input[type="submit"] {
 ```scss
 .custom-success-box {
     @extend %alert-success;
+}
+```
+
+#### Rem-calc function
+
+A `rem-calc()` function converts pixels to rems.
+
+**Usage**
+
+###### scss
+
+```scss
+.container {
+    margin: rem-calc(15);
+    font-size: rem-calc(16);
+}
+```
+
+and the output would be:
+
+```scss
+.container {
+    margin: 0.9375rem;
+    font-size: 1rem;
 }
 ```
