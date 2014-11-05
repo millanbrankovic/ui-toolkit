@@ -9,7 +9,7 @@ A collection of small, responsive SCSS modular-based elements for use on any web
 
 
 
-**UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, then some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [UI BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
+**UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, then some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
 
 
 
@@ -48,6 +48,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 
 #### Media Queries
 Media Queries are defined through variables and mixins. 
+
 Basic variables are:
 
 ```scss
