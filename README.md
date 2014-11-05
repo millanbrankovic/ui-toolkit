@@ -19,7 +19,7 @@ My collection of small, responsive SCSS modular-based elements for use on any we
 
 
 #### Grid
-`%row` and `%col` placeholders, and `row()` and `col()` mixins are here to create rows and columns with semantic markup, like so:
+`%row` and `%col` placeholders, and `row()` and `col()` mixins are here to create rows and columns with the semantic markup, like so:
 
 ###### html
 ```html
