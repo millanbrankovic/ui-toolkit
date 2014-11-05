@@ -47,7 +47,7 @@ Use the `row()` and `col()` mixins and `%row` and `%col` placeholders to create 
 #### Media Queries
 Media Queries are defined through variables and mixins. Basic variables are:
 
-`
+```scss
 $small: "max-width: 40rem"; // 640px
 $medium: "min-width: 40.06rem"; // 641px
 $large: "min-width: 64.06rem"; // 1025px
@@ -55,4 +55,4 @@ $xlarge: "min-width: 90.06rem"; // 1441px
 $xxlarge: "min-width: 120.1rem"; // 1921px
 $portrait: "orientation: portrait" !default;
 $landscape: "orientation: landscape" !default;
-`
+```
