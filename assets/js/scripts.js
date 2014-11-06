@@ -24,7 +24,7 @@
 
                 thisMenu.addClass("expand");
 
-                $(document).on("click", function() {
+                $(document).on("click touchmove", function() {
                     ddMenus.removeClass("expand");
                 });
             }
@@ -34,7 +34,6 @@
 
 
     $(".has-drop-down").on('click', function(e) {
-        e.preventDefault()
         e.stopPropagation();
 
         $(this).toggleClass("open");
