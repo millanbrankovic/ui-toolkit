@@ -1,7 +1,7 @@
 # UIToolKity
 
 
-## A Little Responsive UI ToolKit for starting a new project
+## A Small Responsive UI ToolKit for starting a new project
 
 
 My collection of small, responsive SCSS modular-based elements for use on any web project. It's a mobile first and Sass & Compass based UI ToolKit - semantically oriented - **NO CLASSES** such as `.row`, `.col`, `.columns`, `.large-4` or `.sm-4`.
