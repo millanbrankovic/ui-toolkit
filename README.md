@@ -4,7 +4,7 @@
 ## A Little Responsive UI ToolKit for starting a new project
 
 
-My collection of small, responsive SCSS modular-based elements for use on any web project. It's a mobile first and Sass & Compass based UI ToolKit - semantically oriented - no classes such as `.row`, `.col`, `.columns`, `.large-4` or `.sm-4`.
+My collection of small, responsive SCSS modular-based elements for use on any web project. It's a mobile first and Sass & Compass based UI ToolKit - semantically oriented - **NO CLASESS** such as `.row`, `.col`, `.columns`, `.large-4` or `.sm-4`.
 
 
 **UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
@@ -35,7 +35,7 @@ My collection of small, responsive SCSS modular-based elements for use on any we
 .custom-row-class-name {
     @extend %row;
     @include row();
-    
+
     .custom-column-class-name {
         @extend %col;
         @include col(6);
@@ -92,7 +92,7 @@ And Media Query Mixin is:
         @include col(6);
         background: green;
     }
-    
+
     @include screen(large) {
         @include col(2);
         background: yellow;
