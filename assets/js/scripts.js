@@ -38,7 +38,7 @@
 
         $(".has-drop-down").toggleClass("open");
 
-        $(document).on('click', function() {
+        $(window).on('click touchstart', function() {
             $(".has-drop-down").removeClass("open");
         });
     });
@@ -54,6 +54,8 @@
     })
 
 })();
+
+
 
 
 // $(document).ready(function() {
