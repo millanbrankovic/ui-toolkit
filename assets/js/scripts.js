@@ -38,9 +38,8 @@
 
         $(".has-drop-down").toggleClass("open");
 
-        $(document).on('click touchstart', function() {
+        $(document).on('click touchmove', function() {
             $(".has-drop-down").removeClass("open");
-            return false;
         });
     });
 
