@@ -1,13 +1,5 @@
 # Require any additional plugins...
 require "compass-normalize"
-require 'autoprefixer-rails'
-
-on_stylesheet_saved do |file|
-  css = File.read(file)
-  File.open(file, 'w') do |io|
-    io << AutoprefixerRails.process(css, browsers: ['last 2 version', '> 1%', 'ie 10'])
-  end
-end
 
 # Set this to the root of your project when deployed:
 http_path = "/"
