@@ -21,8 +21,6 @@
     display: inline-block;
     vertical-align: middle;
     @include font-smoothing();
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
 }
 
 .ico-arrow-down:before {
