@@ -32,22 +32,22 @@
     }
 
 
-
-    $(".has-drop-down").on('click', function(e) {
+    $(".has-drop-down > a").on('click', function(e) {
+        e.preventDefault();
         e.stopPropagation();
 
-        $(this).toggleClass("open");
-    });
+        $(".has-drop-down").toggleClass("open");
 
-    $(document).on('click', function() {
-        $(".has-drop-down").removeClass("open");
+        $(document).on('click', function() {
+            $(".has-drop-down").removeClass("open");
+        });
     });
-
 
 
     $(window).on('scroll touchmove', function () {
         $(".header").toggleClass("sticky", $(document).scrollTop() > 356);
     });
+
 
     $(".close").on('click', function() {
         $(this).parent().fadeOut(400);
