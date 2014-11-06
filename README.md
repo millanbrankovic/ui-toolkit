@@ -170,4 +170,4 @@ and the output would be:
 }
 ```
 
-[Demo](http://millanbrankovic.github.io/UIToolKit) with ALL the elements that **UIToolKity** contains.
+[Demo](http://millanbrankovic.github.io/UIToolKit) with all the elements that **UIToolKity** contains.
