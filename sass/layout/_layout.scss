@@ -81,13 +81,17 @@
 
     &:after {
         content: "";
-        width: 30%;
+        width: 60%;
         height: 1px;
         left: 50%;
         bottom: 0;
         position: absolute;
         background: darken($light-color, 15%);
         @include transform(translateX(-50%));
+
+        @include screen($large) {
+            width: 30%;
+        }
     }
 
     @include screen($medium) {
