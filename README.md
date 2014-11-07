@@ -1,16 +1,16 @@
 # UIToolKity
 
 
-## A Little Responsive UI ToolKit for starting a new project
+## A Small Responsive UI ToolKit for starting a new project
 
 
-My collection of small, responsive SCSS modular-based elements for use on any web project. It's a mobile first and Sass & Compass based UI ToolKit - semantically oriented - no classes such as `.row`, `.col`, `.columns`, `.large-4` or `.sm-4`.
+My collection of small, responsive SCSS modular-based elements for use on any web project. It's a mobile first and Sass & Compass based UI ToolKit - semantically oriented - **NO CLASSES** such as `.row`, `.col`, `.columns`, `.large-4` or `.sm-4`.
 
 
 **UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
 
 
-[Demo](http://millanbrankovic.github.io/UIToolKit) page was created by all the elements that **UIToolKity** contains.
+[Demo](http://millanbrankovic.github.io/UIToolKit) page was created with all the elements that **UIToolKity** contains.
 
 
 ### How to use
@@ -170,4 +170,4 @@ and the output would be:
 }
 ```
 
-[Demo](http://millanbrankovic.github.io/UIToolKit) page was created by all the elements that **UIToolKity** contains.
+[Demo](http://millanbrankovic.github.io/UIToolKit) with all the elements that **UIToolKity** contains.
