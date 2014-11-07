@@ -48,6 +48,7 @@ $col-gutter: rem-calc(15) !default;
     background: $light-color;
     border-radius: $global-radius;
 
+    &:before,
     &:after {
         content: "";
         display: table;
