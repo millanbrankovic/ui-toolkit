@@ -48,6 +48,7 @@ $col-gutter: rem-calc(15) !default;
     padding: rem-calc(15);
     background: darken($light-color, 10%);
 
+    &:before,
     &:after {
         content: "";
         display: table;
