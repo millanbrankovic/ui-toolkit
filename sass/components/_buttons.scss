@@ -26,12 +26,11 @@ $btn-default-color: #fff;
 %btn {
     width: 100%;
     position: relative;
-    @extend %v-align;
-    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
     cursor: pointer;
-    line-height: 1;
     border: none;
-    border-radius: $global-radius;
+    line-height: 1;
     transition: all .35s ease;
     @include user-select(none);
 
@@ -39,9 +38,8 @@ $btn-default-color: #fff;
         width: auto;
     }
 
-    &[disabled],
-    &.disabled {
-        color: rgba(#000, .18);
+    &:disabled {
+        color: rgba(#000, .3);
         cursor: default;
         pointer-events: none;
         border-color: darken($light-color, 15%);
@@ -54,7 +52,7 @@ $btn-default-color: #fff;
     }
 }
 
-@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false) {
+@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false, $btn-radius: false) {
     color: $btn-color;
     padding: $btn-padding;
     font-size: $btn-font-size;
@@ -69,8 +67,14 @@ $btn-default-color: #fff;
         margin: $btn-margin;
     }
 
-    @if ($btn-border) {
-        border: $btn-border;
+    @if ($btn-radius) {
+        border-radius: $btn-radius;
+    }
+
+    @if ($btn-border-color) {
+        border: 1px solid $btn-border-color;
+    } @else {
+        border: 1px solid darken($btn-bg, 9%);
     }
 
     &:hover {
