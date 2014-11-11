@@ -26,22 +26,33 @@ $btn-default-color: #fff;
 %btn {
     width: 100%;
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
+    @extend %v-align;
     cursor: pointer;
     border: none;
     line-height: 1;
-    border-radius: $global-radius;
     transition: all .35s ease;
     @include user-select(none);
 
     @include screen ($large) {
         width: auto;
     }
+
+    &:disabled {
+        color: rgba(#000, .3);
+        cursor: default;
+        pointer-events: none;
+        border-color: darken($light-color, 15%);
+        background: darken($light-color, 6%);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
 }
 
-@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false) {
+@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false, $btn-radius: false) {
+    color: $btn-color;
     padding: $btn-padding;
     font-size: $btn-font-size;
     background: $btn-bg;
@@ -53,6 +64,10 @@ $btn-default-color: #fff;
 
     @if ($btn-margin) {
         margin: $btn-margin;
+    }
+
+    @if ($btn-radius) {
+        border-radius: $btn-radius;
     }
 
     @if ($btn-border-color) {
@@ -67,16 +82,7 @@ $btn-default-color: #fff;
 
     &:active,
     &:focus {
-        outline: none;
         background: darken($btn-bg, 8%);
-    }
-
-    &:disabled {
-        color: rgba(#000, .3);
-        cursor: default;
-        pointer-events: none;
-        border-color: darken($light-color, 15%);
-        background: darken($light-color, 6%);
     }
 }
 
@@ -84,15 +90,16 @@ $btn-default-color: #fff;
 button,
 input[type="submit"] {
     @extend %btn;
-    @include btn();
+    @include btn($btn-radius: $global-radius);
 }
+
 
 .default-button {
     @include btn($btn-bg: $btn-default-color);
 }
 
 .brand-button {
-    @include btn($btn-bg: $btn-brand-color, $btn-color: $light-color);
+    @include btn($btn-bg: $btn-brand-color);
 }
 
 .info-button {
