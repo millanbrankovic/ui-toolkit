@@ -26,12 +26,11 @@ $btn-default-color: #fff;
 %btn {
     width: 100%;
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
+    @extend %v-align;
     text-align: center;
     cursor: pointer;
-    border: none;
     line-height: 1;
+    border: none;
     border-radius: $global-radius;
     transition: all .35s ease;
     @include user-select(none);
@@ -39,9 +38,24 @@ $btn-default-color: #fff;
     @include screen ($large) {
         width: auto;
     }
+
+    &[disabled],
+    &.disabled {
+        color: rgba(#000, .18);
+        cursor: default;
+        pointer-events: none;
+        border-color: darken($light-color, 15%);
+        background: darken($light-color, 6%);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
 }
 
-@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false) {
+@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false) {
+    color: $btn-color;
     padding: $btn-padding;
     font-size: $btn-font-size;
     background: $btn-bg;
@@ -55,10 +69,8 @@ $btn-default-color: #fff;
         margin: $btn-margin;
     }
 
-    @if ($btn-border-color) {
-        border: 1px solid $btn-border-color;
-    } @else {
-        border: 1px solid darken($btn-bg, 9%);
+    @if ($btn-border) {
+        border: $btn-border;
     }
 
     &:hover {
@@ -67,16 +79,7 @@ $btn-default-color: #fff;
 
     &:active,
     &:focus {
-        outline: none;
         background: darken($btn-bg, 8%);
-    }
-
-    &:disabled {
-        color: rgba(#000, .3);
-        cursor: default;
-        pointer-events: none;
-        border-color: darken($light-color, 15%);
-        background: darken($light-color, 6%);
     }
 }
 
