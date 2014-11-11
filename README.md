@@ -115,14 +115,10 @@ Some basic variables are already defined.
 
 ###### scss
 ```scss
-button {
+button,
+input[type="submit"]{
     @extend %btn;
     @include btn($btn-padding: $btn-med, $btn-font-size: $btn-med-font-size, $btn-bg: $brand-primary);
-}
-
-input[type="submit"] {
-    @extend %btn;
-    @include btn($btn-padding: $btn-med, $btn-font-size: $btn-med-font-size, $btn-bg: $btn-default-color);
 }
 ```
 
