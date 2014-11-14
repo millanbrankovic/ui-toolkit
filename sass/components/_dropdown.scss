@@ -68,9 +68,7 @@
         margin: rem-calc(0 25 0 0);
     }
 
-    .hamburger-icon,
-    .hamburger-icon:before,
-    .hamburger-icon:after {
+    .hamburger-icon, .hamburger-icon:before, .hamburger-icon:after {
         content: "";
         width: rem-calc(25);
         height: 3px;

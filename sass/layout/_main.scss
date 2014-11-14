@@ -50,9 +50,7 @@
     }
 }
 
-.grid-features,
-.how-grid-works,
-.grid-images {
+.grid-features, .how-grid-works, .grid-images {
     @extend %block;
     text-align: left;
 }
@@ -79,8 +77,7 @@
             padding-right: 0;
         }
 
-        &:nth-last-child(1),
-        &:nth-last-child(2) {
+        &:nth-last-child(1), &:nth-last-child(2) {
             margin-bottom: 0;
         }
     }
@@ -120,8 +117,7 @@
     }
 }
 
-.button-samples,
-.button-sizes {
+.button-samples, .button-sizes {
     @extend %col;
     @include col(12);
 }
@@ -139,8 +135,7 @@
     background: darken($light-color, 4%);
 }
 
-.form-example,
-.custom-form-example {
+.form-example, .custom-form-example {
     @extend %col;
     @include col(12);
     text-align: left;
@@ -158,8 +153,7 @@
     }
 }
 
-.location-selection,
-.city-selection {
+.location-selection, .city-selection {
     .custom-inputs {
         display: block;
     }

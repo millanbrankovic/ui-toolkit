@@ -278,8 +278,7 @@ table {
   display: inline-block;
   vertical-align: middle; }
 
-.drop-down-menu, .drop-down, .grid-images ul, .buttons ul, .form-example ul,
-.custom-form-example ul, .footer ul {
+.drop-down-menu, .drop-down, .grid-images ul, .buttons ul, .form-example ul, .custom-form-example ul, .footer ul {
   margin: 0;
   padding: 0;
   list-style-type: none; }
@@ -288,15 +287,11 @@ table {
   width: 100%;
   margin: 0 auto; }
 
-.grid-features,
-.how-grid-works,
-.grid-images, .caption, .header .main-nav, .grid-images li, .button-samples,
-.button-sizes, .form-example,
-.custom-form-example, .city-selection, .alerts-samples, .hero h2 {
+.grid-features, .how-grid-works, .grid-images, .caption, .header .main-nav, .grid-images li, .button-samples, .button-sizes, .form-example, .custom-form-example, .city-selection, .alerts-samples, .hero h2 {
   float: left;
   width: 100%;
-  position: relative;
-  padding: 0 0.9375rem; }
+  padding: 0 0.9375rem;
+  position: relative; }
 
 .grid-content {
   padding: 0.9375rem;
@@ -873,9 +868,7 @@ input[type="radio"] + label .check {
     color: white; }
   .toogle-menu .text {
     margin: 0 1.5625rem 0 0; }
-  .toogle-menu .hamburger-icon,
-  .toogle-menu .hamburger-icon:before,
-  .toogle-menu .hamburger-icon:after {
+  .toogle-menu .hamburger-icon, .toogle-menu .hamburger-icon:before, .toogle-menu .hamburger-icon:after {
     content: "";
     width: 1.5625rem;
     height: 3px;
@@ -1156,9 +1149,7 @@ input[type="radio"] + label .check {
     .grid-system .grid-images {
       width: 25%; } }
 
-.grid-features,
-.how-grid-works,
-.grid-images {
+.grid-features, .how-grid-works, .grid-images {
   text-align: left; }
 
 .grid-images li {
@@ -1194,8 +1185,7 @@ input[type="radio"] + label .check {
     .buttons li {
       width: auto; } }
 
-.button-samples,
-.button-sizes {
+.button-samples, .button-sizes {
   width: 100%; }
 
 .button-sizes .default-button {
@@ -1213,23 +1203,18 @@ input[type="radio"] + label .check {
 .forms {
   background: whitesmoke; }
 
-.form-example,
-.custom-form-example {
+.form-example, .custom-form-example {
   width: 100%;
   text-align: left; }
   @media (min-width: 40.06rem) {
-    .form-example,
-    .custom-form-example {
+    .form-example, .custom-form-example {
       width: 50%; } }
-  .form-example input[type="submit"],
-  .custom-form-example input[type="submit"] {
+  .form-example input[type="submit"], .custom-form-example input[type="submit"] {
     float: right; }
 
-.location-selection .custom-inputs,
-.city-selection .custom-inputs {
+.location-selection .custom-inputs, .city-selection .custom-inputs {
   display: block; }
-.location-selection select,
-.city-selection select {
+.location-selection select, .city-selection select {
   margin: 0; }
 
 .city-selection {
