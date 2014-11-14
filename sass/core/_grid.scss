@@ -20,7 +20,7 @@ $col-gutter: rem-calc(15) !default;
     @extend %clearfix;
 }
 
-@mixin row() {
+@mixin row {
     @extend %row;
     max-width: $row-width;
 }
@@ -30,12 +30,20 @@ $col-gutter: rem-calc(15) !default;
 %col {
     float: left;
     width: 100%;
-    position: relative;
     padding: 0 $col-gutter;
+    position: relative;
 }
 
-@mixin col($col) {
+@mixin col($col, $float: false, $padding: false) {
     width: percentage($col / $col-total);
+
+    @if ($float) {
+        float: $float;
+    }
+
+    @if ($padding) {
+        padding: $padding;
+    }
 }
 
 
