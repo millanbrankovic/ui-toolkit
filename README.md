@@ -34,8 +34,7 @@ My collection of small, responsive SCSS modular-based elements for use on any we
 ```scss
 .custom-row-class-name {
     @extend %row;
-    @include row();
-    
+
     .custom-column-class-name {
         @extend %col;
         @include col(6);
@@ -92,7 +91,7 @@ And Media Query Mixin is:
         @include col(6);
         background: green;
     }
-    
+
     @include screen(large) {
         @include col(2);
         background: yellow;
