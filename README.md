@@ -34,7 +34,6 @@ My collection of small, responsive SCSS modular-based elements for use on any we
 ```scss
 .custom-row-class-name {
     @extend %row;
-    @include row();
 
     .custom-column-class-name {
         @extend %col;
