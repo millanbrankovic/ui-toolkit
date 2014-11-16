@@ -17,12 +17,8 @@ $col-gutter: rem-calc(15) !default;
 %row {
     width: 100%;
     margin: 0 auto;
-    @extend %clearfix;
-}
-
-@mixin row {
-    @extend %row;
     max-width: $row-width;
+    @extend %clearfix;
 }
 
 // --------------------------------------------------
