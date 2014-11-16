@@ -4,7 +4,7 @@
 
 
 .inner-content {
-    @include row();
+    @extend %row;
 }
 
 
@@ -38,7 +38,6 @@
 
 .headline {
     @extend %row;
-    @include row();
     padding: rem-calc(25 15);
     text-align: center;
 

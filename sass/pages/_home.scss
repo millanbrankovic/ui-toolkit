@@ -19,7 +19,6 @@
 
     .title {
         @extend %row;
-        @include row();
     }
 
     h2 {

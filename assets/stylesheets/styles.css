@@ -285,7 +285,8 @@ table {
 
 .inner-content, .headline, .hero .title {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 80rem; }
 
 .grid-features, .how-grid-works, .grid-images, .caption, .header .main-nav, .grid-images li, .button-samples, .button-sizes, .form-example, .custom-form-example, .city-selection, .alerts-samples, .hero h2 {
   float: left;
@@ -1029,9 +1030,6 @@ input[type="radio"] + label .check {
       color: white;
       background: #078fd8; }
 
-.inner-content {
-  max-width: 80rem; }
-
 .sticky h1 {
   color: white;
   font-size: 1.5rem; }
@@ -1049,7 +1047,6 @@ input[type="radio"] + label .check {
       border: 1px solid rgba(255, 255, 255, 0.2); } }
 
 .headline {
-  max-width: 80rem;
   padding: 1.5625rem 0.9375rem;
   text-align: center; }
   .headline h3 {
@@ -1259,8 +1256,6 @@ input[type="radio"] + label .check {
   @media (min-width: 40.06rem) {
     .hero {
       padding-top: 10rem; } }
-  .hero .title {
-    max-width: 80rem; }
   .hero h2 {
     width: 100%;
     color: white;
