@@ -53,7 +53,6 @@ $btn-default-color: #fff;
 }
 
 @mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false, $btn-radius: false) {
-    color: $btn-color;
     padding: $btn-padding;
     font-size: $btn-font-size;
     background: $btn-bg;
@@ -65,6 +64,10 @@ $btn-default-color: #fff;
 
     @if ($btn-margin) {
         margin: $btn-margin;
+    }
+
+    @if ($btn-color) {
+        color: $btn-color;
     }
 
     @if ($btn-radius) {
