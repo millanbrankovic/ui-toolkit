@@ -92,7 +92,7 @@ And Media Query Mixin is:
         background: green;
     }
 
-    @include screen(large) {
+    @include screen($large) {
         @include col(2);
         background: yellow;
     }
