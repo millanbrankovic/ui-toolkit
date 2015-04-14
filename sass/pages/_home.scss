@@ -17,10 +17,6 @@
         padding-top: rem-calc(160);
     }
 
-    .title {
-        @extend %row;
-    }
-
     h2 {
         @extend %col;
         @include col(12);
@@ -40,7 +36,7 @@
             }
 
             @include screen($large) {
-                width: 80%;
+                width: 70%;
                 font-size: $h3-lrg-size;
             }
         }
