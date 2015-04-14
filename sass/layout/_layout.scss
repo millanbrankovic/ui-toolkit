@@ -19,7 +19,13 @@
     }
 
     .toogle-menu {
-        background: $dark-color;
+        color: $light-color;
+        border: 1px solid #ffb3b0;
+        background: $brand-primary;
+    }
+
+    .hamburger-icon, .hamburger-icon:before, .hamburger-icon:after {
+        background: $light-color;
     }
 
     .main-nav {
@@ -27,10 +33,52 @@
     }
 
     .drop-down-menu {
-        background: $dark-color;
+        background: $brand-primary;
 
         @include screen($medium) {
-            border: 1px solid rgba($light-color, .2);
+            border: 1px solid #ffb3b0;
+        }
+
+        > li {
+            > a {
+                color: $light-color;
+
+                &:hover {
+                    background: #f9807b;
+                }
+
+                .ico {
+                    color: $light-color;
+                }
+            }
+        }
+    }
+
+    .drop-down {
+        background: $brand-primary;
+
+        li {
+            border-bottom: 1px solid #ffb3b0;
+
+            &:first-child {
+                a {
+                    &:before {
+                        border-bottom: 8px solid $brand-primary;
+                    }
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                color: $light-color;
+
+                &:hover {
+                    background: #f9807b;
+                }
+            }
         }
     }
 }

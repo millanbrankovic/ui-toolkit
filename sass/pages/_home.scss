@@ -11,7 +11,7 @@
     z-index: -1;
     text-align: center;
     position: fixed;
-    background: url("../../assets/images/home/galaxy.jpg") no-repeat center top / cover;
+    background: $brand-primary;
 
     @include screen($medium) {
         padding-top: rem-calc(160);

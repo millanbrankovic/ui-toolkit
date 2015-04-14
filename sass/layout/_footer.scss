@@ -5,8 +5,8 @@
 
 .footer {
     padding: rem-calc(30 0);
-    background: $dark-color;
     text-align: center;
+    background: $brand-secondary;
 
     ul {
         color: $light-color;
@@ -14,6 +14,7 @@
         @extend %reset-list;
 
         li {
+            color: $base-font-color;
             margin: rem-calc(5 0);
         }
 

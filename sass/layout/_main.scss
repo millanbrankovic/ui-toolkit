@@ -25,7 +25,7 @@
 
 // Grid-System
 .grid-system {
-    background: #def5ff;
+    background: $brand-secondary;
 
     h6 {
         margin: rem-calc(0 0 15);
@@ -132,7 +132,7 @@
 
 // Forms
 .forms {
-    background: darken($light-color, 4%);
+    background: $brand-secondary;
 }
 
 .form-example, .custom-form-example {

@@ -46,22 +46,20 @@
 .toogle-menu {
     display: block;
     padding: rem-calc(12 25);
-    color: $light-color;
+    color: rgba($dark-color, .7);
     cursor: pointer;
     position: relative;
     font-size: rem-calc(13);
     text-align: right;
     text-transform: uppercase;
-    @include user-select(none);
     border-radius: $global-radius;
-    background: rgba(#000, .7);
+    border: 1px solid $light-color;
+    background: $light-color;
+    @include user-select(none);
+    @include transition(all .35s ease);
 
     @include screen($medium) {
         display: none;
-    }
-
-    &:hover {
-        color: $light-color;
     }
 
     .text {
@@ -75,7 +73,7 @@
         top: 48%;
         right: rem-calc(15);
         position: absolute;
-        background: $light-color;
+        background: rgba($dark-color, .7);
         border-radius: 1px;
         @include transition(all .35s ease);
     }
@@ -104,7 +102,7 @@
     max-height: 0;
     overflow: hidden;
     text-align: left;
-    background: rgba(#000, .85);
+    background: $light-color;
     border-radius: 0 0 $global-radius $global-radius;
     @include transition(all .5s ease);
 
@@ -114,7 +112,7 @@
         max-height: 100%;
         overflow: visible;
         text-align: center;
-        background: rgba(#000, .6);
+        border: 1px solid $light-color;
         border-radius: $global-radius;
     }
 
@@ -122,12 +120,12 @@
         display: block;
         position: relative;
         font-size: rem-calc(14);
-        border-bottom: 1px solid rgba($light-color, .2);
+        border-bottom: 1px solid #ffb3b0;
 
         @include screen($medium) {
             display: inline-block;
             border-bottom: none;
-            border-right: 1px solid rgba($light-color, .2);
+            border-right: 1px solid #ffb3b0;
         }
 
         &:last-child,
@@ -136,23 +134,23 @@
         }
 
         &:first-child {
-            border-top: 1px solid rgba($light-color, .2);
+            border-top: 1px solid #ffb3b0;
 
             @include screen($medium) {
                 border-top: none;
-                border-left: 1px solid rgba($light-color, .2);
+                border-left: 1px solid #ffb3b0;
             }
         }
 
         > a {
             display: block;
-            color: rgba($light-color, .7);
+            color: rgba($dark-color, .7);
             padding: rem-calc(15 25);
             text-transform: uppercase;
 
             &:hover {
                 color: $brand-primary;
-                background: $dark-color;
+                background: $light-gray-color;
             }
         }
     }
@@ -172,8 +170,8 @@
                 top: rem-calc(17);
                 right: rem-calc(15);
                 position: absolute;
+                color: #ffb3b0;
                 font-size: rem-calc(11);
-                color: rgba($light-color, .7);
                 @include transition(all .15s ease);
 
                 @include screen($medium) {
@@ -202,10 +200,11 @@
     position: absolute;
     background: rgba(#000, .9);
     border-radius: $global-radius;
+    box-shadow: 0 4px 10px rgba(#000, .3);
     @include transition(all .15s ease);
 
     @include screen($medium) {
-        background: rgba($dark-color, .85);
+        background: $light-color;
     }
 
     &:before {
@@ -218,7 +217,7 @@
     }
 
     li {
-        border-bottom: 1px solid rgba($light-color, .2);
+        border-bottom: 1px solid #ffb3b0;
 
         &:first-child {
             a {
@@ -238,7 +237,7 @@
                     @include transform(translateX(-50%));
 
                     @include screen($medium) {
-                        border-bottom: 8px solid rgba($dark-color, .8);
+                        border-bottom: 8px solid $light-color;
                     }
                 }
 
@@ -246,7 +245,7 @@
                     &:before {
                         border-left: 8px solid transparent;
                         border-right: 8px solid transparent;
-                        border-bottom: 8px solid $brand-primary;
+                        border-bottom: 8px solid $light-gray-color;
                     }
                 }
             }
@@ -265,11 +264,11 @@
         display: block;
         position: relative;
         padding: rem-calc(15 10);
-        color: rgba($light-color, .7);
+        color: rgba($dark-color, .7);
 
         &:hover {
-            color: $light-color;
-            background: $brand-primary;
+            color: $brand-primary;
+            background: $light-gray-color;
         }
     }
 }

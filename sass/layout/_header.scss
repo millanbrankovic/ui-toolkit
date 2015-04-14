@@ -14,7 +14,7 @@
 
     &.sticky {
         height: rem-calc(70);
-        background: $dark-color;
+        background: $brand-primary;
     }
 
     h1 {
@@ -23,6 +23,7 @@
             weight: 100;
             family: $base-font-light;
         }
+        color: $light-color;
         @include transition(all .5s ease);
     }
 
