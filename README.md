@@ -10,7 +10,7 @@ My collection of small, responsive SCSS modular-based elements for use on any we
 **UIToolKity** includes some of the [CORE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/core) styles that are necessary for a consistent layout such as grid system, media queries, mixins, variables and functions, some of the [UI COMPONENTS](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/components) (buttons, forms, alerts, drop-down menu), and some of the [BASE](https://github.com/millanbrankovic/UIToolKit/tree/master/sass/base) styles.
 
 
-[Demo](http://millanbrankovic.github.io/UIToolKit) page was created with all the elements that **UIToolKity** contains.
+[Demo](http://millanbrankovic.github.io/ui-toolkit) page was created with all the elements that **UIToolKity** contains.
 
 
 ### How to use
